@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load staticfiles %}
+
+{% block title %}
+New student survey
+{% endblock %}
+
+<style>
+{% block style %}
+.business-header {
+    height: 400px;
+    background: url('{% static "img/About1.jpg" %}') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+{% endblock %}
+</style>
+
+{% block tagline %}
+    Newstudent Survey
+{% endblock tagline %}
+
+{% block content %}
+<form action="/newstudent/" method="post">{% csrf_token %}
+
+<section id="intro" class="container content-section">
+    <div class="row" align="left">
+        <div class="col-lg-8 col-lg-offset-2">
+        {% if form.errors %}
+        <p class="errorlist" style="font-size: 18px; font-weight: bolder">
+        Error: you have incorrectly filled out some part of the survey. Please scroll down to see the red error text.
+        </p>
+        {% endif %}
+        <h3>Let’s Get Coffee uses this survey to pair up you up with an upperclassman for an informal, 30-minute meeting (coffee optional). Your responses to these questions will be shared with upperclassmen in your college/major. You’ll ultimately be selected by one of them to meet up sometime on campus.</h3>
+    </div>
+
+    <div class="row" align="left">
+        <div class="col-lg-8 col-lg-offset-2">
+        <h2>Basic information</h2>
+        <br>
+        {{ form|crispy }}
+        <p>Your response will only be successfully submitted if you proceed to a thanks page; otherwise, there is an error in your survey responses that must be corrected. Thanks!</p>
+        <br>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <input class='btn btn-default btn-lg' type="submit" value="Submit" />
+        </div>
+    </div>
+</section>
+</form>
+
+{% endblock %}

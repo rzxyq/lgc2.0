@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %}
+Schedule
+{% endblock %}
+
+{% block tagline %}
+    Schedule
+{% endblock tagline %}
+
+<style>
+{% block style %}
+.business-header {
+    height: 400px;
+    background: url('{% static "img/Schedule1.jpg" %}') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+{% endblock %}
+</style>
+
+{% block content %}
+<div class='container'>
+    <div class="row" align="left">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Schedule</h2>
+            <br>
+            <h3>Let’s Get Coffee connects new students to upperclassmen at the start of each semester through a simple timeline that mainly involves a survey week, selection process, and meeting period.</h3>
+            <p> </p>
+            <table id="schedule">
+                <tr>
+                <td><img src='{% static "img/Number1.png" %}' width="120" height="120"/></td><td><h3>Survey</h3><p>New students and upperclassmen complete their respective surveys by the end of Sunday, February 7.</p></td>
+                </tr>
+                <tr>
+                <td><img src='{% static "img/Number2.png" %}' width="120" height="120"/></td><td><h3>Select</h3><p>Emailed the website link on February 8, uppercasslemn select and email their new student no later than February 10.</p></td>
+                </tr>
+                <tr>
+                <td><img src='{% static "img/Number3.png" %}' width="120" height="120"/></td><td><h3>Meet</h3><p>Upperclassmen meet with their new student for at least 30 minutes somewhere on campus.</p></td>
+                </tr>
+                <tr>
+                <td><img src='{% static "img/Number4.png" %}' width="120" height="120"/></td><td><h3>Post</h3><p>Share a photo or testimonial from your meeting to our Facebook page for a chance to win one of our cool awards
+.</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+</div>
+{% endblock %}
