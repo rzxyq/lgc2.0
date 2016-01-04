@@ -19,4 +19,5 @@ class NewStudent(models.Model):
     selected = models.BooleanField(default=False)
     upperclassman = models.ForeignKey('upperclassman.Upperclassman', null=True)
 
-
+    def __str__(self):
+        return self.name
