@@ -20,7 +20,7 @@ def basic(request):
             netid = (form.cleaned_data['netid']).strip()
             if NewStudent.objects.filter(netid=netid).count() > 0:
                 return HttpResponseRedirect('/error_exists/')
-            hometown = form.cleaned_data['hometown']
+            # hometown = form.cleaned_data['hometown']
             year = form.cleaned_data['year']
             school = form.cleaned_data['school']
             major = form.cleaned_data['major']
@@ -40,7 +40,7 @@ def basic(request):
             survey = form.cleaned_data['survey']
             student = NewStudent(name = name,
                     netid = netid,
-                    hometown = hometown,
+                    # hometown = hometown,
                     year = year,
                     college = school,
                     major = major,
