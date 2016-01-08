@@ -16,6 +16,10 @@ New student survey
     background-size: cover;
     -o-background-size: cover;
 }
+.word_count {
+    font-size: 0.75;
+    color:#a7a9ac;
+}
 {% endblock %}
 </style>
 
@@ -51,5 +55,40 @@ New student survey
     </div>
 </section>
 </form>
-
 {% endblock %}
+
+<script>
+{% block script %}
+$(function() {
+    //how many words left
+    function wordCount(val){
+        return {
+            charactersNoSpaces : val.replace(/\s+/g, '').length,
+            characters         : val.length,
+            words              : val.match(/\S+/g).length,
+            lines              : val.split(/\r*\n/).length
+        };
+    }
+
+    $('label[for*="sa"').append("<span class='word_count'>125 words.</span>");
+    $('textarea').keypress(function() {
+        var c = wordCount( $(this).val() );
+        var sa_id = $(this).attr('id');
+        $('label[for="' + sa_id + '"] span.word_count').text("  " + c.words + " words.");
+    })
+
+    // remove error when user starts typing
+    //deal with input boxes
+    var $errordivs = $('div.has-error');
+    $errordivs.keypress(function() {
+        $(this).removeClass('has-error');
+    })
+    //deal with radiobuttons
+    $errordivs.find('input[type="checkbox"]').click(function() {
+        $(this).parents('div.has-error').first().removeClass('has-error');
+    });
+
+}) //end ready
+{% endblock script %}
+</script>
+
