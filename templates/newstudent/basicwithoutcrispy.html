@@ -5,10 +5,6 @@
 New student survey
 {% endblock %}
 
-{% block script %}
-
-{% endblock %}
-
 {% block content %}
 <form action="/newstudent/" method="post">{% csrf_token %}
 
@@ -26,16 +22,15 @@ New student survey
         </div>
     </div>
 
-    <div class="row" align="left">
-        <div class="col-lg-8 col-lg-offset-2">
+    <div id="form_holder" class="row" align="left">
+        <div id="basic_info" class="col-lg-8 col-lg-offset-2">
         <h2>Basic information</h2>
         <br>
-        {{ form|crispy }}
         {% for field in form %}
             {% if field.name == "major" %}
             </div>
             <hr>
-            <div class="col-lg-8 col-lg-offset-2">
+            <div id="academic" class="col-lg-8 col-lg-offset-2">
             <h2>Academic</h2>
             <br>
             <p class="blurb">For the academic portion of the survey, please select the major and potential minor that you are most strongly considering even if you are not currently in that college or major. Keep in mind that your upperclassman will likely share your academic selections.</p>
@@ -44,7 +39,7 @@ New student survey
             {% if field.name == "extracurriculars" %}
             </div>
             <hr>
-            <div class="col-lg-8 col-lg-offset-2">
+            <div id="extracurricular" class="col-lg-8 col-lg-offset-2">
             <h2>Extracurricular</h2>
             <br>
             <p class="blurb">For the extracurricular portion of the survey, please mark all activities of significant interest. Please do not mark more than five.</p>
@@ -53,7 +48,7 @@ New student survey
             {% if field.name == "career" %}
             </div>
             <hr>
-            <div class="col-lg-8 col-lg-offset-2">
+            <div id="career" class="col-lg-8 col-lg-offset-2">
             <h2>Career</h2>
             <br>
             <p class="blurb">For the career portion of the survey, please mark all prospective fields of significant interest. Please do not mark more than five.</p>
@@ -62,7 +57,7 @@ New student survey
             {% if field.name == "sa1" %}
             </div>
             <hr>
-            <div class="col-lg-8 col-lg-offset-2">
+            <div id="short_answer" class="col-lg-8 col-lg-offset-2">
             <h2>Short Answer</h2>
             <br>
             <p class="blurb">For the short answer portion of the survey, please respond concisely and comprehensively. What you answer will help upperclassmen determine if they could be a positive mentor for you.</p>
@@ -103,8 +98,27 @@ New student survey
         <br>
         <input class='btn btn-default btn-lg' type="submit" value="Submit" />
         </div>
+        <input id="next" type="button" value="Next">
     </div>
+
 </section>
 </form>
 
 {% endblock %}
+
+<script>
+{% block script %}
+$(function() {
+    $('div#form_holder').children().hide();
+    $('input#next').show();
+    var $change_div = $('div#basic_info');
+    $change_div.show();
+    $('input#next').click(function() {
+        $change_div.hide();
+        // $change_div.replaceWith( $change_div.next() );
+        $change_div = $change_div.next();
+        $change_div.show();
+    });
+})
+{% endblock script %}
+</script>
