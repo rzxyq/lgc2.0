@@ -88,6 +88,24 @@ $(function() {
         $(this).parents('div.has-error').first().removeClass('has-error');
     });
 
+    //change display of checkboxes that are too long
+    $('div.checkbox').css({
+        'display': 'inline-block',
+    });
+    if ($(window).width() > 700) {
+        $('div.checkbox').css('width', '30%');
+    } else {
+        $('div.checkbox').css('width', '100%');
+    }  
+    $(window).resize(function() {
+        if ($(window).width() > 700) {
+            $('div.checkbox').css('width', '30%');
+        } else {
+            $('div.checkbox').css('width', '100%');
+        }        
+    });
+    
+
 }) //end ready
 {% endblock script %}
 </script>
