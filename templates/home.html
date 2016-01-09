@@ -45,14 +45,13 @@
     background: url('{% static "img/homepage_6.jpg" %}') no-repeat top center scroll;
     background-size: cover;
     }
-    div #buttons {
+    div #divbuttons {
         position: absolute;
         bottom: 50px;
-    width: 80%;
-    height: 140px;
-    /*border: 3px solid #73AD21;*/
-    left: 50%;  
-    margin-left: -40%;
+        width: 80%;
+        height: 140px;
+        left: 50%;  
+        margin-left: -40%;
     }
     {% endblock %}
 </style>
@@ -120,7 +119,7 @@
                 <div class="carousel-caption">
                 </div>
             </div> -->
-            <div class="container" id='buttons'>
+            <div class="container" id='divbuttons'>
                 <div class="row">
                     <div class='col-sm-6'>
                         <a href="{% url 'newstudent' %}" class="btn btn-default btn-block btn-lg" style="white-space: normal;">
@@ -159,9 +158,37 @@
 
 <script>
 {% block script %}
-    <!-- Script to Activate the Carousel -->
+$(function() {
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
+
+    //button position on front page
+    if ($(window).width() < 760) {
+        $('#divbuttons p').hide();
+    }
+    $(window).resize(function() {
+        //  var btmOffset = $(window).height() * 0.1;
+        // console.log(btmOffset);
+        // var height = $(window).height() * 0.2;
+        // console.log(height);
+
+        // $('div#divbuttons').css({
+        //     'position': 'absolute',
+        //     'bottom': btmOffset,
+        //     'width': '80%',
+        //     'left': '50%',
+        //     'margin-left': '-40%',
+        //     'height': height
+        // });
+        if ($(window).width() < 760) {
+            $('#divbuttons p').hide();
+        } else {
+            $('#divbuttons p').show();
+        }
+    });
+
+
+})
 {% endblock script %}
 </script>

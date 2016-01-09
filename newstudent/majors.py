@@ -76,4 +76,10 @@ Statistical Science
 Urban and Regional Studies
 Viticulture and Enology'''
 
-majorslong.split('\n')
+
+
+majorslong = majorslong.split('\n')
+finishedS = ''
+for major in majorslong:
+    finishedS += "('" + major + "','" + major + "'),\n"
+print(finishedS)
