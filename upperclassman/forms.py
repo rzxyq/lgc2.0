@@ -8,7 +8,7 @@ class UpperClassmanForm(forms.Form):
         ('Junior', 'Junior'),
         ('Senior', 'Senior'),
     )
-    year = forms.ChoiceField(label=("Year"),
+    year = forms.ChoiceField(label=("Class Year"),
         choices=YEAR, widget=forms.Select(), initial='FR')
     SCHOOL = (
         ('Arts & Sciences', 'Arts & Sciences'),

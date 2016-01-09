@@ -11,7 +11,7 @@ class NewStudentForm(forms.Form):
         ('Sophomore Transfer', 'Sophomore Transfer'),
         ('Junior Transfer', 'Junior Transfer'),
     )
-    year = forms.ChoiceField(label=("Year"),
+    year = forms.ChoiceField(label=("Class Year"),
         choices=YEAR, widget=forms.Select(),)
     SCHOOL = (
         ('Arts & Sciences', 'Arts & Sciences'),
