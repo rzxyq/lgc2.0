@@ -4,6 +4,7 @@ class UpperClassmanForm(forms.Form):
     name = forms.CharField(max_length=35)
     netid = forms.CharField(max_length=10)
     YEAR = (
+        ('Freshman', 'Freshman'),
         ('Sophomore', 'Sophomore'),
         ('Junior', 'Junior'),
         ('Senior', 'Senior'),
@@ -11,9 +12,9 @@ class UpperClassmanForm(forms.Form):
     year = forms.ChoiceField(label=("Class Year"),
         choices=YEAR, widget=forms.Select(), initial='FR')
     SCHOOL = (
-        ('Arts & Sciences', 'Arts & Sciences'),
         ('Agriculture & Life Sciences', 'Agriculture & Life Sciences'),
         ('Architecture, Art & Planning','Architecture, Art & Planning'),
+        ('Arts & Sciences', 'Arts & Sciences'),
         ('Engineering','Engineering'),
         ('Hotel Administration','Hotel Administration'),
         ('Human Ecology','Human Ecology'),
@@ -182,11 +183,11 @@ class UpperClassmanForm(forms.Form):
         choices=MAJOR2, widget=forms.Select())
 
     SURVEY = (
-        ('Quarter Cards','Quarter Cards'),
-        ('Posters','Posters'),
+        ('Clubfest','Clubfest'),
+        ('Advertising','Advertising'),
+        ('Another organization','Another organization'),
         ('Social Media','Social Media'),
-        ('Videos','Videos'),
-        ('Student Organizations','Student Organizations'),
+        ('Word of mouth','Word of mouth'),
         )
 
     survey = forms.MultipleChoiceField(label=("How did you hear about us?"),

@@ -8,14 +8,17 @@ class NewStudentForm(forms.Form):
     # hometown = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Dallas, Texas'}))
     YEAR = (
         ('Freshman', 'Freshman'),
+        ('Sophomore', 'Sophomore'),
         ('Sophomore Transfer', 'Sophomore Transfer'),
+        ('Junior', 'Junior'),
         ('Junior Transfer', 'Junior Transfer'),
+        ('Senior', 'Senior'),
     )
     year = forms.ChoiceField(label=("Class Year"),
         choices=YEAR, widget=forms.Select(),)
     SCHOOL = (
-        ('Arts & Sciences', 'Arts & Sciences'),
         ('Agriculture & Life Sciences', 'Agriculture & Life Sciences'),
+        ('Arts & Sciences', 'Arts & Sciences'),
         ('Architecture, Art & Planning','Architecture, Art & Planning'),
         ('Engineering','Engineering'),
         ('Hotel Administration','Hotel Administration'),
@@ -219,11 +222,11 @@ class NewStudentForm(forms.Form):
         choices=MINOR, widget=forms.Select(),)
 
     SURVEY = (
-    ('Quarter Cards','Quarter Cards'),
-    ('Posters','Posters'),
+    ('Clubfest','Clubfest'),
+    ('Advertising','Advertising'),
+    ('Another organization','Another organization'),
     ('Social Media','Social Media'),
-    ('Videos','Videos'),
-    ('Student Organizations','Student Organizations'),
+    ('Word of mouth','Word of mouth'),
     )
 
     survey = forms.MultipleChoiceField(label=("How did you hear about Let’s Get Coffee?"),
