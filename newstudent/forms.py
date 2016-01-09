@@ -303,7 +303,7 @@ class NewStudentForm(forms.Form):
 
     sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman?? (125 words max)"),
         widget=forms.Textarea, max_length=250)
-    sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman?? (125 words max)"),
+    sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
         widget=forms.Textarea, max_length=250)
     sa3 = forms.CharField(label=("Tell us something interesting about yourself (125 words max)"),
         widget=forms.Textarea, max_length=250)

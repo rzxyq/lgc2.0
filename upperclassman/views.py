@@ -31,7 +31,7 @@ def upper(request):
                 organization=organization)
             upperclass.save()
             mail_title = 'Let\'s Get Coffee: Thanks!'
-            message = 'Thank you for taking the time to sign up as an upperclassman for the Fall 2015 Round of Let\'s Get Coffee. We are thrilled to have you participating in this initiative. \n\nAfter the survey window has closed on Saturday, September 12, we will share with you the survey responses of new students in your college and major, providing you with the opportunity to handpick a new student based on similar interests. Then, it is your responsibility to email them to arrange a meeting at a public place on campus. We will remind you when the selection process has begun via email.\n\nPlease let us know if you have any questions or concerns.\n\nThanks, \nThe Let\'s Get Coffee Steering Committee'
+            message = '''Thanks for completing the Upperclassmen survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/schedule/.\nWhen the survey window closes on Feb. 8th, you will receive an email with a link to see the survey responses of matching new students in your major/college. As the schedule shows, you'll have the opportunity then to handpick one new student to meet. Be on the lookout for that link!'''
             # Thanks, \n
             # The CampusConnection Steering Committee\n\n
             # Blake Barr (bab354)\n

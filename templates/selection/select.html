@@ -15,6 +15,10 @@ function check(){
 </script>
 {% endblock %}
 
+{% block tagline %}
+    Selection
+{% endblock tagline %}
+
 {% block content %}
 <section id="intro" class="container content-section">
     <div class="row" align="left">
@@ -33,13 +37,12 @@ function check(){
         </div>
         <div>
             <form action="/selection/list/" method="post" onsubmit="return check();">{% csrf_token %}
-            <table id="students">
+            <table id="students" class="table table-striped table-responsive">
             <thead>
                 <tr>
                     <th id="select"></th>
                     <th id="name">Name</th>
             <!--        <th id="netid">Netid</th> -->
-                    <th id="hometown">Hometown</th>
                     <th id="year">Year</th>
                     <th id="college">College</th>
                     <th id="major">Major</th>
@@ -49,8 +52,8 @@ function check(){
                     <th id="career">Career Interests</th>
             <!--        <th id="othercar">Other Career Aspirations</th> -->
                     <th id="hope">What do you hope to gain from your time at Cornell?</th>
-                    <th id="guidance">What guidance do you want from your upperclassman?</th>
-                    <th id="else">Anything else you want to add about yourself?</th>
+                    <th id="guidance">What questions do you want to ask of your upperclassman</th>
+                    <th id="else">Tell us something interesting about yourself</th>
                 </tr>
             </thead>
             {% for student in students %}
@@ -58,7 +61,7 @@ function check(){
                     <td><input type="radio" name="row" value={{student.netid}},{{user.id}}></td>
                     <td>{{student.name}} <br/> ({{student.netid}})</td>
             <!--         <td>{{student.netid}}</td> -->
-                    <td>{{student.hometown}}</td>
+                    <!-- <td>{{student.hometown}}</td> -->
                     <td>{{student.year}}</td>
                     <td>{{student.college}}</td>
                     <td>{{student.major}}</td>

@@ -54,7 +54,7 @@ def basic(request):
                     sa3 = sa3)
             student.save()
             mail_title = 'Let\'s Get Coffee: Thanks!'
-            message = 'Thank you for taking the time to sign up as a new student for the Fall 2015 Round of Let\'s Get Coffee. We are thrilled to have you participating in this initiative.\n\nAfter the survey window has closed on Saturday, September 12, we will share your survey responses with upperclassmen in your college and major, providing them with the opportunity to handpick you based on similar interests. Then, it is their responsibility to email you to arrange a meeting at a public places on campus. We will let you know once you have been selected by an upperclassman via email.\n\nPlease let us know if you have any questions or concerns. \n\nThanks, \nThe Let\'s Get Coffee Steering Committee'
+            message = '''Thanks for completing the New Students survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/schedule/. \n Please be on the lookout for an email once an upperclassman has selected you. If you don't get one by Feb. 10th, please let us know. '''
             email = 'Let\'s Get Coffee<letsgetcoffeecornell@gmail.com>'
             recipients = [student.netid + '@cornell.edu']
             send_mail(mail_title, message, email, recipients)
