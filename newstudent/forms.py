@@ -16,6 +16,46 @@ class NewStudentForm(forms.Form):
     )
     year = forms.ChoiceField(label=("Class Year"),
         choices=YEAR, widget=forms.Select(),)
+    
+    SURVEY = (
+    ('Clubfest','Clubfest'),
+    ('Advertising','Advertising'),
+    ('Another organization','Another organization'),
+    ('Social Media','Social Media'),
+    ('Word of mouth','Word of mouth'),
+    )
+    survey = forms.MultipleChoiceField(label=("How did you hear about Let’s Get Coffee?"),
+        choices=SURVEY, widget=forms.CheckboxSelectMultiple(), required=False)
+ 
+    HEARD = (
+        ('None','None'),
+        ('ALANA','ALANA'),
+        ('Alternative Breaks','Alternative Breaks'),
+        ('APO','APO'),
+        ('CAPSU','CAPSU'),
+        ('Cornell Catholic','Cornell Catholic'),
+        ('Cornell Minds Matter','Cornell Minds Matter'),
+        ('Cornell Radio','Cornell Radio'),
+        ('CIAS','CIAS'),
+        ('ECO','ECO'),
+        ('Greek Life','Greek Life'),
+        ('Haven','Haven'),
+        ('Hillel','Hillel'),
+        ('ISU','ISU'),
+        ('Slope Media','Slope Media'),
+        ('Speech & Debate','Speech & Debate'),
+        ('OSC','OSC'),        
+    )
+    heard = forms.ChoiceField(label=("If you heard about us from one of our partnering campus organizations, specify below:"),
+        choices=HEARD, widget=forms.Select(), required=False)
+
+    PARTICIPATED = (
+        ('No','No'),
+        ('Yes','Yes'),
+    )
+    participated = forms.ChoiceField(label=("Have you participated in Let's Get Coffee before?"),
+        choices=PARTICIPATED, widget=forms.Select(),)
+
     SCHOOL = (
         ('Agriculture & Life Sciences', 'Agriculture & Life Sciences'),
         ('Arts & Sciences', 'Arts & Sciences'),
@@ -221,16 +261,7 @@ class NewStudentForm(forms.Form):
     minor = forms.ChoiceField(label=("Minor"),
         choices=MINOR, widget=forms.Select(),)
 
-    SURVEY = (
-    ('Clubfest','Clubfest'),
-    ('Advertising','Advertising'),
-    ('Another organization','Another organization'),
-    ('Social Media','Social Media'),
-    ('Word of mouth','Word of mouth'),
-    )
 
-    survey = forms.MultipleChoiceField(label=("How did you hear about Let’s Get Coffee?"),
-        choices=SURVEY, widget=forms.CheckboxSelectMultiple(), required=False)
 
 
     EXTRACURRICULARS = (
@@ -268,7 +299,7 @@ class NewStudentForm(forms.Form):
         ('Varsity Sports','Varsity Sports'),
     )
 
-    extracurriculars = forms.MultipleChoiceField(label=("Extracurriculars"),
+    extracurriculars = forms.MultipleChoiceField(label=("Select up to five activities of extracurricular interest"),
         choices=EXTRACURRICULARS, widget=forms.CheckboxSelectMultiple())
 
     extra_sa = forms.CharField(label=("Feel free to list any other specific extracurricular activities (50 words max)."),
@@ -295,10 +326,9 @@ class NewStudentForm(forms.Form):
         ('Public Health','Public Health'),
         ('Research and Development','Research and Development'),
         ('Sales and Marketing','Sales and Marketing'),
-        ('Undecided','Undecided'),
     )
 
-    career = forms.MultipleChoiceField(label=("Career Interests"),
+    career = forms.MultipleChoiceField(label=("Select up to three prospective fields of career interest"),
         choices=CAREER, widget=forms.CheckboxSelectMultiple())
 
     career_sa = forms.CharField(label=("Feel free to list any other specific prospective careers (125 words max)."),
