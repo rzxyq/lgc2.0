@@ -276,11 +276,11 @@ class NewStudentForm(forms.Form):
         ('Design and Graphics','Design and Graphics'),
         ('Entrepreneurship','Entrepreneurship'),
         ('Environmental Sustainability','Environmental Sustainability'),
-        ('Event Planning','Event Planning'),
         ('Fashion','Fashion'),
         ('Greek Life','Greek Life'),
         ('Journalism','Journalism'),
         ('Languages','Languages'),
+        ('LGBTQ','LGBTQ'),
         ('Media','Media'),
         ('Music','Music'),
         ('Outdoor Recreation','Outdoor Recreation'),
@@ -290,6 +290,7 @@ class NewStudentForm(forms.Form):
         ('Political Activism','Political Activism'),
         ('Science Research','Science Research'),
         ('Social Science Research','Social Science Research'),
+        ('Teaching/Tutoring','Teaching/Tutoring'),
         ('Travel','Travel'),
         ('Religious','Religious'),
         ('ROTC','ROTC'),
@@ -302,14 +303,16 @@ class NewStudentForm(forms.Form):
     extracurriculars = forms.MultipleChoiceField(label=("Select up to five activities of extracurricular interest"),
         choices=EXTRACURRICULARS, widget=forms.CheckboxSelectMultiple())
 
-    extra_sa = forms.CharField(label=("Feel free to list any other specific extracurricular activities (50 words max)."),
+    extra_sa = forms.CharField(label=("Feel free to list any other specific extracurricular activities (125 words max)."),
         widget=forms.Textarea, max_length=100, required=False)
 
     CAREER = (
         #First entry is an abbreviation, second is how it appears on the site
+        ('Agriculture','Agriculture'),
+        ('Art/Design','Art/Design'),
+        ('Biomedical Research','Biomedical Research'),
         ('Business and Finance','Business and Finance'),
         ('Computer and Technology','Computer and Technology'),
-        ('Design','Design'),
         ('Education','Education'),
         ('Engineering','Engineering'),
         ('Entertainment','Entertainment'),
@@ -317,6 +320,8 @@ class NewStudentForm(forms.Form):
         ('Government','Government'),
         ('Health Professions','Health Professions'),
         ('Hospitality','Hospitality'),
+        ('International Clubs','International Clubs'),
+        ('International Development','International Development'),
         ('Journalism','Journalism'),
         ('Law','Law'),
         ('Management','Management'),
@@ -324,8 +329,8 @@ class NewStudentForm(forms.Form):
         ('Military and ArmedForces','Military and Armed Forces'),
         ('Non-Profit','Non-Profit'),
         ('Public Health','Public Health'),
-        ('Research and Development','Research and Development'),
         ('Sales and Marketing','Sales and Marketing'),
+        ('Social Science Research','Social Science Research'),
     )
 
     career = forms.MultipleChoiceField(label=("Select up to three prospective fields of career interest"),
@@ -334,11 +339,32 @@ class NewStudentForm(forms.Form):
     career_sa = forms.CharField(label=("Feel free to list any other specific prospective careers (125 words max)."),
         widget=forms.Textarea, max_length=75, required=False)
 
-    sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman?? (125 words max)"),
+    sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman? (125 words max)"),
         widget=forms.Textarea, max_length=250)
     sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
         widget=forms.Textarea, max_length=250)
-    sa3 = forms.CharField(label=("Tell us something interesting about yourself (125 words max)"),
+    sa3 = forms.CharField(label=("Tell us something interesting about yourself. (125 words max)"),
         widget=forms.Textarea, max_length=250)
 
+    PARTNERING = (
+        #First entry is an abbreviation, second is how it appears on the site
+        ('Alternative Breaks','Alternative Breaks: Service trips where you can make a positive difference during breaks'),
+        ('APO','APO: Service trips where you can make a positive difference during breaks'),
+        ('CAPSU','CAPSU: Service trips where you can make a positive difference during breaks'),
+        ('ECO','ECO: Service trips where you can make a positive difference during breaks'),
+        ('Hillel','Hillel: Service trips where you can make a positive difference during breaks'),
+        ('Slope Media','Slope Media: Service trips where you can make a positive difference during breaks'),
+        ('Tri-Council','Tri-Council: Service trips where you can make a positive difference during breaks'),
+        ('Cornell Radio','Cornell Radio: Service trips where you can make a positive difference during breaks'),
+        ('ISU','International Student Union: Service trips where you can make a positive difference during breaks'),
+        ('OSC','Orientation Steering Committee: Service trips where you can make a positive difference during breaks'),
+        ('CIAS','Cornell International Affairs Society: Service trips where you can make a positive difference during breaks'),
+        ('Haven','Haven: Service trips where you can make a positive difference during breaks'),
+        ('Speech and Debate','Cornell Speech & Debate Society: Service trips where you can make a positive difference during breaks'),
+        ('Cornell Catholic','Cornell Catholic: Service trips where you can make a positive difference during breaks'),
+        ('ALANA','ALANA: Service trips where you can make a positive difference during breaks'),
+)   
+
+    partnering = forms.MultipleChoiceField(label=("We partner with some of the best organizations on campus. Let them know if you’re interested in what they do."),
+        choices=PARTNERING, widget=forms.CheckboxSelectMultiple(), required=False)
 
