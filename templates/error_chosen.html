@@ -1,25 +1,47 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
 
 {% block title %}
-faq
+    Sorry
 {% endblock %}
 
-{% block script %}
+{% block tagline %}
+    Sorry
+{% endblock tagline %}
 
+<style>
+{% block style %}
+.business-header {
+    height: 400px;
+    background: url('{% static "img/NewStudent1.jpg" %}') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+.steps {
+    width: 7em;
+    height: 7em;
+    margin: 1em;
+}
+/*.des {
+    color: black;
+    font-weight: bold;
+}*/
 {% endblock %}
+</style>
 
 {% block content %}
-<section id="contact" class="container content-section text-center">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-        <h1>Sorry</h1>
-        <p>
-        	You have already selected your new student.
-        </p>
-        <p>
-        	If you have any questions or concerns, please do not hesitate to contact us at <a href="mailto:letsgetcoffeecornell@gmail.com">letsgetcoffeecornell@gmail.com</a> or on <a href="http://www.facebook.com/cucampusconnection">Facebook</a>.
-        </p>
+<div class='container'>
+    <div class="row" align="left">
+            <h3>You have already selected your new student for this round.</h3>
+            <h3>If you have any questions or concerns, please feel free to contact us at <a href="mailto:letsgetcoffee@cornell.edu">letsgetcoffee@cornell.edu</a> or on <a href="http://www.facebook.com/cucampusconnection" target="_blank">Facebook</a>.
+            </h3>
         </div>
     </div>
-</section>
+</div>
+
+<div class="clear"></div>
+</div>
 {% endblock %}
