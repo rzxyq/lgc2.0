@@ -1,12 +1,27 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
 
 {% block title %}
-faq
+    faq
 {% endblock %}
 
 {% block tagline %}
     Frequently Asked Questions
 {% endblock tagline %}
+
+<style>
+{% block style %}
+.business-header {
+    height: 400px;
+    background: url('{% static "img/Faq1.jpg" %}') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+{% endblock %}
+</style>
 
 {% block content %}
 <div class='container'>
@@ -88,13 +103,13 @@ faq
             <h3><td><span class="name">What if I&rsquo;m undecided on my major?</span></td></h3>
             <br>
             <p>
-                Pick the one major you are most strongly considering.
+                Pick the one major you are most strongly considering. If you are looking for help choosing a major, feel free to express that in your short answer responses.
             </p>
 
-            <h3><td><span class="name">What if I am a College Scholar or Interdisciplinary Studies Major?</span></td></h3>
+            <h3><td><span class="name">What if I am a College Scholar or Interdisciplinary Studies major?</span></td></h3>
             <br>
             <p>
-                Please select the major(s) that you would feel comfortable talking about with your connection.
+                If you are a College Scholar or Interdisciplinary Studies major, please mark that as well as other majors for which you would feel comfortable providing guidance on for new students.
             </p>
         </div>
     </div>

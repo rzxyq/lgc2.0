@@ -88,8 +88,8 @@ class NewStudentForm(forms.Form):
         ('Chemistry and Chemical Biology','Chemistry and Chemical Biology'),
         ('China and Asia-Pacific Studies','China and Asia-Pacific Studies'),
         ('Civil Engineering','Civil Engineering'),
-        ('Classics (Greek, Latin)','Classics (Greek, Latin)'),
-        ('College Scholar Program','College Scholar Program'),
+        ('Classics','Classics'),
+        ('College Scholar','College Scholar'),
         ('Communication','Communication'),
         ('Comparative Literature','Comparative Literature'),
         ('Computer Science','Computer Science'),
@@ -100,9 +100,9 @@ class NewStudentForm(forms.Form):
         ('Engineering Physics','Engineering Physics'),
         ('English','English'),
         ('Entomology','Entomology'),
-        ('Environmental and Sustainability Sciences','Environmental and Sustainability Sciences'),
+        ('Environmental and Sustainable Sciences','Environmental and Sustainable Sciences'),
         ('Environmental Engineering','Environmental Engineering'),
-        ('Feminist, Gender & Sexuality Studies','Feminist, Gender & Sexuality Studies'),
+        ('Feminist, Gender and Sexuality Studies','Feminist, Gender and Sexuality Studies'),
         ('Fiber Science and Apparel Design','Fiber Science and Apparel Design'),
         ('Fine Arts','Fine Arts'),
         ('Food Science','Food Science'),
@@ -116,10 +116,9 @@ class NewStudentForm(forms.Form):
         ('Hotel Administration','Hotel Administration'),
         ('Human Biology, Health and Society','Human Biology, Health and Society'),
         ('Human Development','Human Development'),
-        ('Independent Major','Independent Major'),
         ('Industrial and Labor Relations','Industrial and Labor Relations'),
         ('Information Science','Information Science'),
-        ('Information Science, Systems, and Technology','Information Science, Systems, and Technology'),
+        ('Information Science Systems and Technology','Information Science, Systems and Technology'),
         ('Interdisciplinary Studies','Interdisciplinary Studies'),
         ('International Agriculture and Rural Development','International Agriculture and Rural Development'),
         ('Italian','Italian'),
@@ -135,7 +134,7 @@ class NewStudentForm(forms.Form):
         ('Performing and Media Arts','Performing and Media Arts'),
         ('Philosophy','Philosophy'),
         ('Physics','Physics'),
-        ('Plant Science','Plant Science'),
+        ('Plant Sciences','Plant Sciences'),
         ('Policy Analysis and Management','Policy Analysis and Management'),
         ('Psychology','Psychology'),
         ('Religious Studies','Religious Studies'),
@@ -143,8 +142,8 @@ class NewStudentForm(forms.Form):
         ('Science of Earth Systems','Science of Earth Systems'),
         ('Sociology','Sociology'),
         ('Spanish','Spanish'),
-        ('Statistical Science','Statistical Science'),
-        ('Urban and Regional Studies','Urban and Regional Studies'),
+        ('Statistics','Statistics'),
+        ('Urban and Regional Planning','Urban and Regional Planning'),
         ('Viticulture and Enology','Viticulture and Enology'),
     )
     major = forms.ChoiceField(label=("Major"),
@@ -260,9 +259,6 @@ class NewStudentForm(forms.Form):
     )
     minor = forms.ChoiceField(label=("Minor"),
         choices=MINOR, widget=forms.Select(),)
-
-
-
 
     EXTRACURRICULARS = (
         #First entry is an abbreviation, second is how it appears on the site

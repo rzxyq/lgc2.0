@@ -1,4 +1,27 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %}
+    contact
+{% endblock %}
+
+{% block tagline %}
+    Contact
+{% endblock tagline %}
+
+<style>
+{% block style %}
+.business-header {
+    height: 400px;
+    background: url('{% static "img/contact1.jpg" %}') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+{% endblock %}
+</style>
 
 {% block content %}
     <!-- Contact Section -->
@@ -6,15 +29,15 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Contact LGC</h2>
-            <h3>If you have any questions or concerns, please feel free to contact us at letsgetcoffeecornell@gmail.com or on Facebook.
+            <h3>If you have any questions or concerns, please feel free to contact us at <a href="mailto:letsgetcoffee@cornell.edu">letsgetcoffee@cornell.edu</a> or on <a href="http://www.facebook.com/cucampusconnection" target="_blank">Facebook</a>.
             </h3>
             <br>
             <ul class="list-inline banner-social-buttons">
                 <li>
-                    <a href="http://www.facebook.com/cucampusconnection" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                </li>
+                    <a href="mailto:letsgetcoffee@cornell.edu" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Email</span></a>
+                </li>                
                 <li>
-                    <a href="mailto:letsgetcoffeecornell@gmail.com" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Email</span></a>
+                    <a href="http://www.facebook.com/cucampusconnection" target="blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
                 </li>
             </ul>
         </div>
