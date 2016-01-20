@@ -4,7 +4,7 @@ from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit
 
 class NewStudentForm(forms.Form):
     name = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Ron Weasley'}))
-    netid = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'placeholder': 'er447'}))
+    netid = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'placeholder': 'rw447'}))
     # hometown = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Dallas, Texas'}))
     YEAR = (
         ('Freshman', 'Freshman'),
@@ -344,21 +344,19 @@ class NewStudentForm(forms.Form):
 
     PARTNERING = (
         #First entry is an abbreviation, second is how it appears on the site
-        ('Alternative Breaks','Alternative Breaks: Service trips where you can make a positive difference during breaks'),
-        ('APO','APO: Service trips where you can make a positive difference during breaks'),
-        ('CAPSU','CAPSU: Service trips where you can make a positive difference during breaks'),
-        ('ECO','ECO: Service trips where you can make a positive difference during breaks'),
-        ('Hillel','Hillel: Service trips where you can make a positive difference during breaks'),
-        ('Slope Media','Slope Media: Service trips where you can make a positive difference during breaks'),
-        ('Tri-Council','Tri-Council: Service trips where you can make a positive difference during breaks'),
-        ('Cornell Radio','Cornell Radio: Service trips where you can make a positive difference during breaks'),
-        ('ISU','International Student Union: Service trips where you can make a positive difference during breaks'),
-        ('OSC','Orientation Steering Committee: Service trips where you can make a positive difference during breaks'),
-        ('CIAS','Cornell International Affairs Society: Service trips where you can make a positive difference during breaks'),
-        ('Haven','Haven: Service trips where you can make a positive difference during breaks'),
-        ('Speech and Debate','Cornell Speech & Debate Society: Service trips where you can make a positive difference during breaks'),
-        ('Cornell Catholic','Cornell Catholic: Service trips where you can make a positive difference during breaks'),
-        ('ALANA','ALANA: Service trips where you can make a positive difference during breaks'),
+        ('Alternative Breaks','Alternative Breaks: Organizing student service-learning breaks during academic breaks'),
+        ('APO','Alpha Phi Omega (APO): A student organization for community service at Cornell and in Ithaca'),
+        ('CAPSU','Cornell Asian Pacific Island Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
+        ('ECO','Environmental Collaborative (ECO): The umbrella organization for environmental and sustainability clubs at Cornell'),
+        ('Hillel','Hillel: Engaging and enriching the lives of the Jewish community at Cornell'),
+        ('Slope Media','Slope Media: A magazine and online source for creative news, media, and entertainment'),
+        ('Tri-Council','Greek Life Tri-Council: The IFC, Panhell, and MGLC comprising greek life at Cornell'),
+        ('Cornell Radio','Cornell Radio: An online radio stream programmed for Cornell students'),
+        ('ISU','International Student Union (ISU): A diverse board of students promoting engagement about world events, cultures, and issues'),
+        ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
+        ('CIAS','Cornell International Affairs Society (CIAS): Discussions of international affairs and the Cornell group for Model UN'),
+        ('Haven','Haven: Umbrella organization for organizations that support and engage the LGBTQ community'),
+        ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
 )   
 
     partnering = forms.MultipleChoiceField(label=("We partner with some of the best organizations on campus. Let them know if you’re interested in what they do."),

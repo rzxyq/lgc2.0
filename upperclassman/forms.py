@@ -1,8 +1,8 @@
 from django import forms
 
 class UpperClassmanForm(forms.Form):
-    name = forms.CharField(max_length=35)
-    netid = forms.CharField(max_length=10)
+    name = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Jon Snow'}))
+    netid = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'placeholder': 'js274'}))
     YEAR = (
         ('Freshman', 'Freshman'),
         ('Sophomore', 'Sophomore'),
