@@ -336,22 +336,23 @@ class NewStudentForm(forms.Form):
         widget=forms.Textarea, max_length=75, required=False)
 
     sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman? (125 words max)"),
-        widget=forms.Textarea, max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'Help choosing classes, advice for careers, just a new friend, etc.'}), max_length=250)
+
     sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
-        widget=forms.Textarea, max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'How do you balance your studies and social life, keep in touch with family and friends back home, approach professors, etc.'}), max_length=250)
     sa3 = forms.CharField(label=("Tell us something interesting about yourself. (125 words max)"),
-        widget=forms.Textarea, max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'Don’t spend too much time on it.'}), max_length=250)
 
     PARTNERING = (
         #First entry is an abbreviation, second is how it appears on the site
         ('Alternative Breaks','Alternative Breaks: Organizing student service-learning breaks during academic breaks'),
         ('APO','Alpha Phi Omega (APO): A student organization for community service at Cornell and in Ithaca'),
-        ('CAPSU','Cornell Asian Pacific Island Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
+        ('CAPSU','Cornell Asian Pacific Islander Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
         ('ECO','Environmental Collaborative (ECO): The umbrella organization for environmental and sustainability clubs at Cornell'),
-        ('Hillel','Hillel: Engaging and enriching the lives of the Jewish community at Cornell'),
-        ('Slope Media','Slope Media: A magazine and online source for creative news, media, and entertainment'),
+        ('Hillel','Hillel: The hub for Jewish community, religious, and cultural life for Jewish students of all backgrounds'),
+        ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment.'),
         ('Tri-Council','Greek Life Tri-Council: The IFC, Panhell, and MGLC comprising greek life at Cornell'),
-        ('Cornell Radio','Cornell Radio: An online radio stream programmed for Cornell students'),
+        ('Cornell Radio','CornellRadio.com: An online radio station programmed by and for Cornell students'),
         ('ISU','International Student Union (ISU): A diverse board of students promoting engagement about world events, cultures, and issues'),
         ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
         ('CIAS','Cornell International Affairs Society (CIAS): Discussions of international affairs and the Cornell group for Model UN'),
