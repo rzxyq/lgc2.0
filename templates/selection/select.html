@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 
 {% block title %}
-
+Selection
 {% endblock %}
 
-{% block script %}
 <script>
-function check(){ 
-    if ($('input[name=row]:checked').length == 0) {
-    return false;
+{% block script %}
+$(function() {
+    function check(){ 
+        if ($('input[name=row]:checked').length == 0) {
+        return false;
+        }
+        return true;
     }
-    return true;
-}
+})
 </script>
 {% endblock %}
 

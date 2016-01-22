@@ -111,6 +111,11 @@ $(function() {
     $('#div_id_sa1').prepend('<br><h2>Short Answer</h2>');
     $('#div_id_partnering').prepend('<br><h2>One last thing</h2>');
 
+    //make partnering orgs links  
+    var $partnering_label = $('#id_partnering_1').parent();
+    $partnering_label.contents().filter(function() {
+      return this.nodeType === 3;
+    }).wrap( "<a href='http://replacethistext.com'></a>" )
 
 }) //end ready
 {% endblock script %}

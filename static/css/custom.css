@@ -32,3 +32,11 @@ h2 {
   font-weight: 900;
   margin-top: 10px;
 }
+
+a{
+  color: #a7a9ac;
+}
+
+a:hover{
+  color: #25408F;
+}
