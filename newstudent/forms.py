@@ -252,12 +252,12 @@ class NewStudentForm(forms.Form):
         ('Southeast Asia Studies','Southeast Asia Studies'),
         ('Spanish','Spanish'),
         ('Sustainable Energy Systems','Sustainable Energy System'),
-        ('Theatre','Theatre'),f
+        ('Theatre','Theatre'),
         ('Urban and Regional Studies','Urban and Regional Studies'),
         ('Visual Studies','Visual Studies'),
         ('Viticulture and Enology','Viticulture and Enology'),
     )
-    minor = forms.ChoiceField(label=("Second Major"),
+    minor = forms.ChoiceField(label=("Second Major (only select a second if you are seriously considering this major)"),
         choices=MINOR, widget=forms.Select(),)
 
     EXTRACURRICULARS = (
@@ -300,7 +300,7 @@ class NewStudentForm(forms.Form):
         choices=EXTRACURRICULARS, widget=forms.CheckboxSelectMultiple())
 
     extra_sa = forms.CharField(label=("Feel free to list any other specific extracurricular activities (125 words max)."),
-        widget=forms.Textarea, max_length=100, required=False)
+        widget=forms.Textarea, max_length=638, required=False)
 
     CAREER = (
         #First entry is an abbreviation, second is how it appears on the site
@@ -333,15 +333,15 @@ class NewStudentForm(forms.Form):
         choices=CAREER, widget=forms.CheckboxSelectMultiple())
 
     career_sa = forms.CharField(label=("Feel free to list any other specific prospective careers (125 words max)."),
-        widget=forms.Textarea, max_length=75, required=False)
+        widget=forms.Textarea, max_length=638, required=False)
 
     sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman? (125 words max)"),
-        widget=forms.Textarea(attrs={'placeholder': 'Help choosing classes, advice for careers, just a new friend, etc.'}), max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'Help choosing classes, advice for careers, just a new friend, etc.'}), max_length=638)
 
     sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
-        widget=forms.Textarea(attrs={'placeholder': 'How do you balance your studies and social life, keep in touch with family and friends back home, approach professors, etc.'}), max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'How do you balance your studies and social life, keep in touch with family and friends back home, approach professors, etc.'}), max_length=638)
     sa3 = forms.CharField(label=("Tell us something interesting about yourself. (125 words max)"),
-        widget=forms.Textarea(attrs={'placeholder': 'Whatever comes to mind! Don’t spend too much time on it.'}), max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'Whatever comes to mind! Don’t spend too much time on it.'}), max_length=638)
 
     PARTNERING = (
         #First entry is an abbreviation, second is how it appears on the site

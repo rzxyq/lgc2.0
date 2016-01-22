@@ -17,7 +17,7 @@ def login(request):
             name = form.cleaned_data['name']
             net = (form.cleaned_data['netid']).strip()
             try:
-                data = Upperclassman.objects.get(netid=net)
+                data = Upperclassman.objects.get(netid__iexact=net)
             except ObjectDoesNotExist:
                 return HttpResponseRedirect('/error_login/')
             if data.finished:
