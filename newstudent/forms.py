@@ -213,12 +213,12 @@ class NewStudentForm(forms.Form):
         ('Southeast Asia Studies','Southeast Asia Studies'),
         ('Spanish','Spanish'),
         ('Sustainable Energy Systems','Sustainable Energy System'),
-        ('Theatre','Theatre'),
+        ('Theatre','Theatre'),f
         ('Urban and Regional Studies','Urban and Regional Studies'),
         ('Visual Studies','Visual Studies'),
         ('Viticulture and Enology','Viticulture and Enology'),
     )
-    minor = forms.ChoiceField(label=("Minor"),
+    minor = forms.ChoiceField(label=("Second Major"),
         choices=MINOR, widget=forms.Select(),)
 
     SURVEY = (
