@@ -4,7 +4,7 @@ from crispy_forms.layout import Layout, Fieldset, ButtonHolder, Submit
 
 class NewStudentForm(forms.Form):
     name = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Ron Weasley'}))
-    netid = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'placeholder': 'er447'}))
+    netid = forms.CharField(max_length=10, widget=forms.TextInput(attrs={'placeholder': 'rw447'}))
     # hometown = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Dallas, Texas'}))
     YEAR = (
         ('Freshman', 'Freshman'),
@@ -16,6 +16,46 @@ class NewStudentForm(forms.Form):
     )
     year = forms.ChoiceField(label=("Class Year"),
         choices=YEAR, widget=forms.Select(),)
+    
+    SURVEY = (
+    ('Clubfest','Clubfest'),
+    ('Advertising','Advertising'),
+    ('Another organization','Another organization'),
+    ('Social Media','Social Media'),
+    ('Word of mouth','Word of mouth'),
+    )
+    survey = forms.MultipleChoiceField(label=("How did you hear about Let’s Get Coffee?"),
+        choices=SURVEY, widget=forms.CheckboxSelectMultiple(), required=False)
+ 
+    HEARD = (
+        ('None','None'),
+        ('ALANA','ALANA'),
+        ('Alternative Breaks','Alternative Breaks'),
+        ('APO','APO'),
+        ('CAPSU','CAPSU'),
+        ('Cornell Catholic','Cornell Catholic'),
+        ('Cornell Minds Matter','Cornell Minds Matter'),
+        ('Cornell Radio','Cornell Radio'),
+        ('CIAS','CIAS'),
+        ('ECO','ECO'),
+        ('Greek Life','Greek Life'),
+        ('Haven','Haven'),
+        ('Hillel','Hillel'),
+        ('ISU','ISU'),
+        ('Slope Media','Slope Media'),
+        ('Speech & Debate','Speech & Debate'),
+        ('OSC','OSC'),        
+    )
+    heard = forms.ChoiceField(label=("If you heard about us from one of our partnering campus organizations, specify below:"),
+        choices=HEARD, widget=forms.Select(), required=False)
+
+    PARTICIPATED = (
+        ('No','No'),
+        ('Yes','Yes'),
+    )
+    participated = forms.ChoiceField(label=("Have you participated in Let's Get Coffee before?"),
+        choices=PARTICIPATED, widget=forms.Select(),)
+
     SCHOOL = (
         ('Agriculture & Life Sciences', 'Agriculture & Life Sciences'),
         ('Arts & Sciences', 'Arts & Sciences'),
@@ -48,8 +88,8 @@ class NewStudentForm(forms.Form):
         ('Chemistry and Chemical Biology','Chemistry and Chemical Biology'),
         ('China and Asia-Pacific Studies','China and Asia-Pacific Studies'),
         ('Civil Engineering','Civil Engineering'),
-        ('Classics (Greek, Latin)','Classics (Greek, Latin)'),
-        ('College Scholar Program','College Scholar Program'),
+        ('Classics','Classics'),
+        ('College Scholar','College Scholar'),
         ('Communication','Communication'),
         ('Comparative Literature','Comparative Literature'),
         ('Computer Science','Computer Science'),
@@ -60,9 +100,9 @@ class NewStudentForm(forms.Form):
         ('Engineering Physics','Engineering Physics'),
         ('English','English'),
         ('Entomology','Entomology'),
-        ('Environmental and Sustainability Sciences','Environmental and Sustainability Sciences'),
+        ('Environmental and Sustainable Sciences','Environmental and Sustainable Sciences'),
         ('Environmental Engineering','Environmental Engineering'),
-        ('Feminist, Gender & Sexuality Studies','Feminist, Gender & Sexuality Studies'),
+        ('Feminist, Gender and Sexuality Studies','Feminist, Gender and Sexuality Studies'),
         ('Fiber Science and Apparel Design','Fiber Science and Apparel Design'),
         ('Fine Arts','Fine Arts'),
         ('Food Science','Food Science'),
@@ -76,10 +116,9 @@ class NewStudentForm(forms.Form):
         ('Hotel Administration','Hotel Administration'),
         ('Human Biology, Health and Society','Human Biology, Health and Society'),
         ('Human Development','Human Development'),
-        ('Independent Major','Independent Major'),
         ('Industrial and Labor Relations','Industrial and Labor Relations'),
         ('Information Science','Information Science'),
-        ('Information Science, Systems, and Technology','Information Science, Systems, and Technology'),
+        ('Information Science Systems and Technology','Information Science, Systems and Technology'),
         ('Interdisciplinary Studies','Interdisciplinary Studies'),
         ('International Agriculture and Rural Development','International Agriculture and Rural Development'),
         ('Italian','Italian'),
@@ -95,7 +134,7 @@ class NewStudentForm(forms.Form):
         ('Performing and Media Arts','Performing and Media Arts'),
         ('Philosophy','Philosophy'),
         ('Physics','Physics'),
-        ('Plant Science','Plant Science'),
+        ('Plant Sciences','Plant Sciences'),
         ('Policy Analysis and Management','Policy Analysis and Management'),
         ('Psychology','Psychology'),
         ('Religious Studies','Religious Studies'),
@@ -103,8 +142,8 @@ class NewStudentForm(forms.Form):
         ('Science of Earth Systems','Science of Earth Systems'),
         ('Sociology','Sociology'),
         ('Spanish','Spanish'),
-        ('Statistical Science','Statistical Science'),
-        ('Urban and Regional Studies','Urban and Regional Studies'),
+        ('Statistics','Statistics'),
+        ('Urban and Regional Planning','Urban and Regional Planning'),
         ('Viticulture and Enology','Viticulture and Enology'),
     )
     major = forms.ChoiceField(label=("Major"),
@@ -221,18 +260,6 @@ class NewStudentForm(forms.Form):
     minor = forms.ChoiceField(label=("Second Major"),
         choices=MINOR, widget=forms.Select(),)
 
-    SURVEY = (
-    ('Clubfest','Clubfest'),
-    ('Advertising','Advertising'),
-    ('Another organization','Another organization'),
-    ('Social Media','Social Media'),
-    ('Word of mouth','Word of mouth'),
-    )
-
-    survey = forms.MultipleChoiceField(label=("How did you hear about Let’s Get Coffee?"),
-        choices=SURVEY, widget=forms.CheckboxSelectMultiple(), required=False)
-
-
     EXTRACURRICULARS = (
         #First entry is an abbreviation, second is how it appears on the site
         ('Acapella','Acapella'),
@@ -245,11 +272,11 @@ class NewStudentForm(forms.Form):
         ('Design and Graphics','Design and Graphics'),
         ('Entrepreneurship','Entrepreneurship'),
         ('Environmental Sustainability','Environmental Sustainability'),
-        ('Event Planning','Event Planning'),
         ('Fashion','Fashion'),
         ('Greek Life','Greek Life'),
         ('Journalism','Journalism'),
         ('Languages','Languages'),
+        ('LGBTQ','LGBTQ'),
         ('Media','Media'),
         ('Music','Music'),
         ('Outdoor Recreation','Outdoor Recreation'),
@@ -259,6 +286,7 @@ class NewStudentForm(forms.Form):
         ('Political Activism','Political Activism'),
         ('Science Research','Science Research'),
         ('Social Science Research','Social Science Research'),
+        ('Teaching/Tutoring','Teaching/Tutoring'),
         ('Travel','Travel'),
         ('Religious','Religious'),
         ('ROTC','ROTC'),
@@ -268,17 +296,19 @@ class NewStudentForm(forms.Form):
         ('Varsity Sports','Varsity Sports'),
     )
 
-    extracurriculars = forms.MultipleChoiceField(label=("Extracurriculars"),
+    extracurriculars = forms.MultipleChoiceField(label=("Select up to five activities of extracurricular interest"),
         choices=EXTRACURRICULARS, widget=forms.CheckboxSelectMultiple())
 
-    extra_sa = forms.CharField(label=("Feel free to list any other specific extracurricular activities (50 words max)."),
+    extra_sa = forms.CharField(label=("Feel free to list any other specific extracurricular activities (125 words max)."),
         widget=forms.Textarea, max_length=100, required=False)
 
     CAREER = (
         #First entry is an abbreviation, second is how it appears on the site
+        ('Agriculture','Agriculture'),
+        ('Art/Design','Art/Design'),
+        ('Biomedical Research','Biomedical Research'),
         ('Business and Finance','Business and Finance'),
         ('Computer and Technology','Computer and Technology'),
-        ('Design','Design'),
         ('Education','Education'),
         ('Engineering','Engineering'),
         ('Entertainment','Entertainment'),
@@ -286,6 +316,8 @@ class NewStudentForm(forms.Form):
         ('Government','Government'),
         ('Health Professions','Health Professions'),
         ('Hospitality','Hospitality'),
+        ('International Clubs','International Clubs'),
+        ('International Development','International Development'),
         ('Journalism','Journalism'),
         ('Law','Law'),
         ('Management','Management'),
@@ -293,22 +325,42 @@ class NewStudentForm(forms.Form):
         ('Military and ArmedForces','Military and Armed Forces'),
         ('Non-Profit','Non-Profit'),
         ('Public Health','Public Health'),
-        ('Research and Development','Research and Development'),
         ('Sales and Marketing','Sales and Marketing'),
-        ('Undecided','Undecided'),
+        ('Social Science Research','Social Science Research'),
     )
 
-    career = forms.MultipleChoiceField(label=("Career Interests"),
+    career = forms.MultipleChoiceField(label=("Select up to three prospective fields of career interest"),
         choices=CAREER, widget=forms.CheckboxSelectMultiple())
 
     career_sa = forms.CharField(label=("Feel free to list any other specific prospective careers (125 words max)."),
         widget=forms.Textarea, max_length=75, required=False)
 
-    sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman?? (125 words max)"),
-        widget=forms.Textarea, max_length=250)
-    sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
-        widget=forms.Textarea, max_length=250)
-    sa3 = forms.CharField(label=("Tell us something interesting about yourself (125 words max)"),
-        widget=forms.Textarea, max_length=250)
+    sa1 = forms.CharField(label=("What do you want to gain from this meeting with your upperclassman? (125 words max)"),
+        widget=forms.Textarea(attrs={'placeholder': 'Help choosing classes, advice for careers, just a new friend, etc.'}), max_length=250)
 
+    sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
+        widget=forms.Textarea(attrs={'placeholder': 'How do you balance your studies and social life, keep in touch with family and friends back home, approach professors, etc.'}), max_length=250)
+    sa3 = forms.CharField(label=("Tell us something interesting about yourself. (125 words max)"),
+        widget=forms.Textarea(attrs={'placeholder': 'Whatever comes to mind! Don’t spend too much time on it.'}), max_length=250)
+
+    PARTNERING = (
+        #First entry is an abbreviation, second is how it appears on the site
+        ('Alternative Breaks','Alternative Breaks: Organizing student service-learning breaks during academic breaks'),
+        ('APO','Alpha Phi Omega (APO): A student organization for community service at Cornell and in Ithaca'),
+        ('BEARS','BEARS: Helping freshmen utilize campus resources and get more out of their year by matching them with an upperclassman mentor'),
+        ('CAPSU','Cornell Asian Pacific Islander Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
+        ('CIAS','Cornell International Affairs Society (CIAS): Discussions of international affairs and the Cornell group for Model UN'),
+        ('Cornell Radio','CornellRadio.com: An online radio station programmed by and for Cornell students'),
+        ('ECO','Environmental Collaborative (ECO): The umbrella organization for environmental and sustainability clubs at Cornell'),
+        ('Greek Life','Greek Life Tri-Council: The IFC, PHC, and MGLC comprising greek life at Cornell'),
+        ('Haven','Haven: Umbrella organization for organizations that support and engage the LGBTQ community'),
+        ('Hillel','Hillel: The hub for Jewish community, religious, and cultural life for Jewish students of all backgrounds'),
+        ('ISU','International Student Union (ISU): A diverse board of students promoting engagement about world events, cultures, and issues'),
+        ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
+        ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment'),
+        ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
+)   
+
+    partnering = forms.MultipleChoiceField(label=("We partner with some of the best organizations on campus. Let them know if you’re interested in what they do."),
+        choices=PARTNERING, widget=forms.CheckboxSelectMultiple(), required=False)
 

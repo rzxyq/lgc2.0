@@ -43,3 +43,13 @@ Upperclassman
 </div>
 </form>
 {% endblock %}
+
+<script>
+{% block script %}
+$(function() {
+    // custom adjustments after crispy_forms
+    $('#div_id_major1').prepend('<p>Please select the major(s) you are currently pursuing. If you are a college scholar or interdisciplinary major, please mark that as well as other majors for which you would feel comfortable providing guidance on for new students.</p>');  
+}) //end ready
+{% endblock script %}
+</script>
+
