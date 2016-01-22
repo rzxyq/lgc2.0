@@ -341,22 +341,23 @@ class NewStudentForm(forms.Form):
     sa2 = forms.CharField(label=("What questions do you want to ask of your upperclassman? (125 words max)"),
         widget=forms.Textarea(attrs={'placeholder': 'How do you balance your studies and social life, keep in touch with family and friends back home, approach professors, etc.'}), max_length=250)
     sa3 = forms.CharField(label=("Tell us something interesting about yourself. (125 words max)"),
-        widget=forms.Textarea(attrs={'placeholder': 'Don’t spend too much time on it.'}), max_length=250)
+        widget=forms.Textarea(attrs={'placeholder': 'Whatever comes to mind! Don’t spend too much time on it.'}), max_length=250)
 
     PARTNERING = (
         #First entry is an abbreviation, second is how it appears on the site
         ('Alternative Breaks','Alternative Breaks: Organizing student service-learning breaks during academic breaks'),
         ('APO','Alpha Phi Omega (APO): A student organization for community service at Cornell and in Ithaca'),
+        ('BEARS','BEARS: Helping freshmen utilize campus resources and get more out of their year by matching them with an upperclassman mentor'),
         ('CAPSU','Cornell Asian Pacific Islander Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
-        ('ECO','Environmental Collaborative (ECO): The umbrella organization for environmental and sustainability clubs at Cornell'),
-        ('Hillel','Hillel: The hub for Jewish community, religious, and cultural life for Jewish students of all backgrounds'),
-        ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment.'),
-        ('Tri-Council','Greek Life Tri-Council: The IFC, Panhell, and MGLC comprising greek life at Cornell'),
+        ('CIAS','Cornell International Affairs Society (CIAS): Discussions of international affairs and the Cornell group for Model UN'),
         ('Cornell Radio','CornellRadio.com: An online radio station programmed by and for Cornell students'),
+        ('ECO','Environmental Collaborative (ECO): The umbrella organization for environmental and sustainability clubs at Cornell'),
+        ('Greek Life','Greek Life Tri-Council: The IFC, PHC, and MGLC comprising greek life at Cornell'),
+        ('Haven','Haven: Umbrella organization for organizations that support and engage the LGBTQ community'),
+        ('Hillel','Hillel: The hub for Jewish community, religious, and cultural life for Jewish students of all backgrounds'),
         ('ISU','International Student Union (ISU): A diverse board of students promoting engagement about world events, cultures, and issues'),
         ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
-        ('CIAS','Cornell International Affairs Society (CIAS): Discussions of international affairs and the Cornell group for Model UN'),
-        ('Haven','Haven: Umbrella organization for organizations that support and engage the LGBTQ community'),
+        ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment'),
         ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
 )   
 
