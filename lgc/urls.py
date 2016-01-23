@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', home, name='home'),
     url(r'^about/', about, name='about'),
-    url(r'^schedule/', schedule, name='schedule'),
+    url(r'^timeline/', schedule, name='schedule'),
     url(r'^faq/', faq, name='faq'),
     url(r'^contact/', contact, name='contact'),
     url(r'^thanks_selection/', thanks_selection, name='thanks'),

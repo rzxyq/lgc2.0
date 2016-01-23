@@ -33,10 +33,7 @@ h2 {
   margin-top: 10px;
 }
 
-a{
-  color: #a7a9ac;
-}
-
-a:hover{
+.nav a:hover{
   color: #25408F;
+  background-color: yellow;
 }
