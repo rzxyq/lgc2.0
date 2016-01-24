@@ -38,6 +38,7 @@ def basic(request):
             sa2 = form.cleaned_data['sa2']
             sa3 = form.cleaned_data['sa3']
             survey = form.cleaned_data['survey']
+            partnering = form.cleaned_data['partnering']
             student = NewStudent(name = name,
                     netid = netid,
                     # hometown = hometown,
@@ -51,7 +52,9 @@ def basic(request):
                     career_sa = career_sa,
                     sa1 = sa1,
                     sa2 = sa2,
-                    sa3 = sa3)
+                    sa3 = sa3,
+                    partnering = partnering,
+                    )
             student.save()
             mail_title = 'Let\'s Get Coffee: Thanks!'
             message = '''Thanks for completing the New Students survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/schedule/. \n Please be on the lookout for an email once an upperclassman has selected you. If you don't get one by Feb. 10th, please let us know. '''
