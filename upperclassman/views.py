@@ -20,6 +20,7 @@ def upper(request):
             major3 = form.cleaned_data['major3']
             survey = form.cleaned_data['survey']
             organization = form.cleaned_data['organization']
+            participated = form.cleaned_data['participated']
             upperclass = Upperclassman(name=name,
                 netid=netid,
                 year=year,
@@ -28,10 +29,11 @@ def upper(request):
                 major2=major2,
                 major3=major3,
                 survey=survey,
+                participated=participated,
                 organization=organization)
             upperclass.save()
             mail_title = 'Let\'s Get Coffee: Thanks!'
-            message = '''Thanks for completing the Upperclassmen survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/schedule/.\nWhen the survey window closes on Feb. 8th, you will receive an email with a link to see the survey responses of matching new students in your major/college. As the schedule shows, you'll have the opportunity then to handpick one new student to meet. Be on the lookout for that link!'''
+            message = '''Thanks for completing the Upperclassmen survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/timeline/.\nWhen the survey window closes on Feb. 8th, you will receive an email with a link to see the survey responses of matching new students in your major/college. As the schedule shows, you'll have the opportunity then to handpick one new student to meet. Be on the lookout for that link!'''
             # Thanks, \n
             # The CampusConnection Steering Committee\n\n
             # Blake Barr (bab354)\n

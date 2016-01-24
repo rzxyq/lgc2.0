@@ -10,6 +10,7 @@ class Upperclassman(models.Model):
     major3 = models.CharField(max_length=200, null=True)
     finished = models.BooleanField(default=False)
     survey = models.TextField()
+    participated = models.TextField()
     organization = models.TextField()
 
     def __unicode__(self):

@@ -16,6 +16,8 @@ class NewStudent(models.Model):
     sa2 = models.TextField(max_length=638,null=True)
     sa3 = models.TextField(max_length=638,null=True)
     survey = models.TextField()
+    heard = models.CharField(max_length=50)
+    participated = models.CharField(max_length=20)
     partnering = models.TextField() 
     selected = models.BooleanField(default=False)
     upperclassman = models.ForeignKey('upperclassman.Upperclassman', null=True)
