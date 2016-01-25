@@ -8,6 +8,7 @@ class NewStudentForm(forms.Form):
     # hometown = forms.CharField(max_length=35, widget=forms.TextInput(attrs={'placeholder': 'Dallas, Texas'}))
     YEAR = (
         ('Freshman', 'Freshman'),
+        ('Freshman Spring Transfer', 'Freshman Spring Transfer'),
         ('Sophomore', 'Sophomore'),
         ('Sophomore Transfer', 'Sophomore Transfer'),
         ('Junior', 'Junior'),
