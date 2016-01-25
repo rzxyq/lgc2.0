@@ -29,22 +29,22 @@ class NewStudentForm(forms.Form):
  
     HEARD = (
         ('None','None'),
-        ('ALANA','ALANA'),
         ('Alternative Breaks','Alternative Breaks'),
         ('APO','APO'),
+        ('BEARS','BEARS'),
         ('CAPSU','CAPSU'),
-        ('Cornell Catholic','Cornell Catholic'),
-        ('Cornell Minds Matter','Cornell Minds Matter'),
-        ('Cornell Radio','Cornell Radio'),
         ('CIAS','CIAS'),
+        ('CornellRadio.com','CornellRadio.com'),
         ('ECO','ECO'),
-        ('Greek Life','Greek Life'),
         ('Haven','Haven'),
         ('Hillel','Hillel'),
+        ('IFC','IFC'),
         ('ISU','ISU'),
+        ('MGLC','MGLC'),
+        ('OSC','OSC'),
+        ('PHC','PHC'),
         ('Slope Media','Slope Media'),
-        ('Speech & Debate','Speech & Debate'),
-        ('OSC','OSC'),        
+        ('Speech & Debate','Speech & Debate'),   
     )
     heard = forms.ChoiceField(label=("If you heard about us from one of our partnering campus organizations, specify below:"),
         choices=HEARD, widget=forms.Select(), required=False)
@@ -345,7 +345,7 @@ class NewStudentForm(forms.Form):
 
     PARTNERING = (
         #First entry is an abbreviation, second is how it appears on the site
-        ('Alternative Breaks','Alternative Breaks: Organizing student service-learning breaks during academic breaks'),
+        ('Alternative Breaks','Alternative Breaks: Organizing student-service learning trips across the country during academic breaks'),
         ('APO','Alpha Phi Omega (APO): A student organization for community service at Cornell and in Ithaca'),
         ('BEARS','BEARS: Helping freshmen utilize campus resources and get more out of their year by matching them with an upperclassman mentor'),
         ('CAPSU','Cornell Asian Pacific Islander Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
@@ -353,9 +353,9 @@ class NewStudentForm(forms.Form):
         ('Cornell Radio','CornellRadio.com: An online radio station programmed by and for Cornell students'),
         ('ECO','ECO (Cornell Environmental Collaborative): The umbrella organization for all environmental and sustainability clubs at Cornell'),
         ('Greek Life','Greek Life Tri-Council: The IFC, PHC, and MGLC comprising greek life at Cornell'),
-        ('Haven','Haven: The LGBTQ+ student union is an organization that provides community, support and education for LGBTQ+ students and allies'),
+        ('Haven','Haven: The LGBTQ+ student union at Cornell, providing community, support and education for LGBTQ+ students and allies'),
         ('Hillel','Hillel: The hub for Jewish community, religious, and cultural life for Jewish students of all backgrounds'),
-        ('ISU','International Student Union (ISU): A diverse board of students promoting engagement about world events, cultures, and issues'),
+        ('ISU','International Student Union (ISU): A diverse group of students promoting engagement about world cultures and issues'),
         ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
         ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment'),
         ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
