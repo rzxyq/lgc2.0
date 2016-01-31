@@ -35,8 +35,14 @@ class NewStudentForm(forms.Form):
         ('BEARS','BEARS'),
         ('CAPSU','CAPSU'),
         ('CIAS','CIAS'),
+        ('Cornell Dems','Cornell Dems'),
+        ('Cornell Minds Matter','Cornell Minds Matter'),
+        ('Cornell Political Union','Cornell Political Union'),
         ('CornellRadio.com','CornellRadio.com'),
+        ('CUABS','CUABS'),
+        ('DSP','DSP'),
         ('ECO','ECO'),
+        ('Forte','Forte'),
         ('Haven','Haven'),
         ('Hillel','Hillel'),
         ('IFC','IFC'),
@@ -44,8 +50,10 @@ class NewStudentForm(forms.Form):
         ('MGLC','MGLC'),
         ('OSC','OSC'),
         ('PHC','PHC'),
+        ('Phi Delta Epsilon','Phi Delta Epsilon'),
         ('Slope Media','Slope Media'),
-        ('Speech & Debate','Speech & Debate'),   
+        ('Speech & Debate','Speech & Debate'),
+        ('Tatkon Center','Tatkon Center'), 
     )
     heard = forms.ChoiceField(label=("If you heard about us from one of our partnering campus organizations, specify below:"),
         choices=HEARD, widget=forms.Select(), required=False)
@@ -347,20 +355,28 @@ class NewStudentForm(forms.Form):
 
     PARTNERING = (
         #First entry is an abbreviation, second is how it appears on the site
-        ('Alternative Breaks','Alternative Breaks: Organizing student-service learning trips across the country during academic breaks'),
+        ('Alternative Breaks','Alternative Breaks: Promoting active citizenship and engaging students in service-learning trips over spring break'),
         ('APO','Alpha Phi Omega (APO): A student organization for community service at Cornell and in Ithaca'),
         ('BEARS','BEARS: Helping freshmen utilize campus resources and get more out of their year by matching them with an upperclassman mentor'),
         ('CAPSU','Cornell Asian Pacific Islander Student Union (CAPSU): Representing and connecting the Asian community at Cornell'),
         ('CIAS','Cornell International Affairs Society (CIAS): Discussions of international affairs and the Cornell group for Model UN'),
+        ('Cornell Dems','Cornell Dems: Promoting, supporting, and engaging the Democratic Party at Cornell'),
+        ('Cornell Minds Matter','Cornell Minds Matter: Promotes the overall mental and emotional health of all Cornell students'),
+        ('Cornell Political Union','Cornell Political Union: Bringing Democrats and Republicans together in meaningful discussion'),
         ('Cornell Radio','CornellRadio.com: An online radio station programmed by and for Cornell students'),
+        ('CUABS','Cornell Undergraduate Asia Business Society (CUABS): A tight-knit business society for students interested in business in Asia'),
+        ('DSP','Delta Sigma Pi: A professional business fraternity devoted to promoting competency and achievement in the field of business.'),
         ('ECO','ECO (Cornell Environmental Collaborative): The umbrella organization for all environmental and sustainability clubs at Cornell'),
+        ('Forte','Forte Campus at Cornell: The ultimate career connection and network for women interested in business'),
         ('Greek Life','Greek Life Tri-Council: The IFC, PHC, and MGLC comprising greek life at Cornell'),
         ('Haven','Haven: The LGBTQ+ student union at Cornell, providing community, support and education for LGBTQ+ students and allies'),
         ('Hillel','Hillel: The hub for Jewish community, religious, and cultural life for Jewish students of all backgrounds'),
         ('ISU','International Student Union (ISU): A diverse group of students promoting engagement about world cultures and issues'),
         ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
+        ('Phi Delta Epsilon','Phi Delta Epsilon International Medical Fraternity: A top premed fraternity at Cornell'),
         ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment'),
         ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
+        ('Tatkon Center','Tatkon Center: Connecting the academic heart of Cornell with the residential center of student life on north campus')
 )   
 
     partnering = forms.MultipleChoiceField(label=("We partner with some of the best organizations on campus. Let them know if you’re interested in what they do."),
