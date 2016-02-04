@@ -22,7 +22,7 @@ def login(request):
                 return HttpResponseRedirect('/error_login/')
             if data.finished:
                  return HttpResponseRedirect('/error_selected/')
-            elif name == data.name:
+            elif name.lower() == data.name.lower():
                 selectees = NewStudent.objects.filter(Q(major=data.major1) |
                     Q(major=data.major2) | Q(major=data.major3)).filter(selected=False)
                 if selectees.count() < 5:
