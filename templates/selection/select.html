@@ -47,7 +47,8 @@ $(function() {
             <!--        <th id="netid">Netid</th> -->
                     <th id="year">Year</th>
                     <th id="college">College</th>
-                    <th id="major">Majors</th>
+                    <th id="major">Major</th>
+                    <th id="minor">Second Major</th>
                     <th id="extrac">Extracurricular Interests</th>
             <!--        <th id="otherex">Other Extracurriculars</th> -->
                     <th id="career">Career Interests</th>
@@ -55,7 +56,7 @@ $(function() {
                     <th id="hope">What do you hope to gain from your time at Cornell?</th>
                     <th id="guidance">What questions do you want to ask of your upperclassman</th>
                     <th id="else">Tell us something interesting about yourself</th>
-                    {# <th>Organizations interested in</th> #}
+                    <th>Organizations interested in</th>
                 </tr>
             </thead>
             {% for student in students %}
@@ -66,7 +67,8 @@ $(function() {
                     <!-- <td>{{student.hometown}}</td> -->
                     <td>{{student.year}}</td>
                     <td>{{student.college}}</td>
-                    <td>{{student.major}},{{student.minor}}</td>
+                    <td>{{student.major}}</td>
+                    <td>{{student.minor}}</td>
                     <td>{{student.extracurricular}}. <br/>Other: {{student.extra_sa}}</td>
             <!--         <td>{{student.extra_sa}}</td> -->
                     <td>{{student.career}}.<br/>Other: {{student.career_sa}}</td>
@@ -74,7 +76,7 @@ $(function() {
                     <td>{{student.sa1}}</td>
                     <td>{{student.sa2}}</td>
                     <td>{{student.sa3}}</td>
-                    {# <td>{{student.partnering}}</td> #}
+                    <td>{{student.partnering}}</td>
                 </tr>
             {% endfor %}
             </table>

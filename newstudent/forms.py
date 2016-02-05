@@ -93,7 +93,6 @@ class NewStudentForm(forms.Form):
         ('Biological Sciences','Biological Sciences'),
         ('Biology and Society','Biology and Society'),
         ('Biometry and Statistics','Biometry and Statistics'),
-        ('Biomedical Engineering', 'Biomedical Engineering'),
         ('Chemical Engineering','Chemical Engineering'),
         ('Chemistry and Chemical Biology','Chemistry and Chemical Biology'),
         ('China and Asia-Pacific Studies','China and Asia-Pacific Studies'),

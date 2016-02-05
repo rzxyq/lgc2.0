@@ -33,10 +33,6 @@ h2 {
   margin-top: 10px;
 }
 
-h1.tagline {
-  font-size: 45px;
-}
-
 .nav a:hover{
   color: #25408F;
   background-color: yellow;
