@@ -1,0 +1,836 @@
+cd ~/Devel	Last login: Mon Mar  7 10:35:10 on ttys002
+cs34	
+ls 
+ruoyanqin ~/Developer/ArrowAppTwilio/arrowserver$ cd ~/Developer/cs3410/
+ruoyanqin ~/Developer/cs3410$ ls
+total 96
+drwxr-xr-x  12 ruoyanqin  staff   408B Mar  6 17:15 .
+drwxr-xr-x  26 ruoyanqin  staff   884B Mar  7 10:27 ..
+-rw-r--r--@  1 ruoyanqin  staff   8.0K Mar  6 18:52 .DS_Store
+drwxr-xr-x  13 ruoyanqin  staff   442B Feb 22 21:59 .git
+drwxr-xr-x   3 ruoyanqin  staff   102B Feb 22 00:05 __pycache__
+drwxr-xr-x  16 ruoyanqin  staff   544B Feb 22 10:19 c files
+-rw-r--r--   1 ruoyanqin  staff    45B Dec 31 21:28 cs3410.sublime-project
+-rw-r--r--   1 ruoyanqin  staff    17K Jan  2 23:18 cs3410.sublime-workspace
+drwxr-xr-x  15 ruoyanqin  staff   510B Mar  6 17:15 hw1
+drwxr-xr-x  10 ruoyanqin  staff   340B Mar  6 17:15 lab1
+-rw-r--r--   1 ruoyanqin  staff   9.3K Feb 18 14:10 lab2.circ
+drwxr-xr-x   4 ruoyanqin  staff   136B Mar  6 17:16 project1
+ruoyanqin ~/Developer/cs3410$ cd project1/
+ruoyanqin ~/Developer/cs3410/project1$ git add .
+ruoyanqin ~/Developer/cs3410/project1$ git commit -m "Added register clock line."
+On branch master
+nothing to commit, working directory clean
+ruoyanqin ~/Developer/cs3410/project1$ git add .
+ruoyanqin ~/Developer/cs3410/project1$ git commit -m "Added register clock line."
+[master b020c35] Added register clock line.
+ 1 file changed, 246 insertions(+), 178 deletions(-)
+ruoyanqin ~/Developer/cs3410/project1$ ipython
+Python 3.5.1 |Anaconda 2.5.0 (x86_64)| (default, Dec  7 2015, 11:24:55) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.0.3 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: import numpy as np
+
+In [2]: np.allclose(1,2)
+Out[2]: False
+
+In [3]: np.allclose(1,1)
+Out[3]: True
+
+In [4]: cd /Users/ruoyanqin/Developer/cs4670 
+/Users/ruoyanqin/Developer/cs4670
+
+In [5]: cd pa2
+/Users/ruoyanqin/Developer/cs4670/pa2
+
+In [6]: run tests.pu
+ERROR: File `'tests.pu.py'` not found.
+
+In [7]: run tests.py
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 50
+    print 'Starting test for TODO {}'.format(todo)
+                                    ^
+SyntaxError: invalid syntax
+
+
+In [8]: ^C
+KeyboardInterrupt
+
+In [8]: quit
+ruoyanqin ~/Developer/cs3410/project1$ source activate py2
+discarding /Users/ruoyanqin/anaconda/bin from PATH
+prepending /Users/ruoyanqin/anaconda/envs/py2/bin to PATH
+(py2)ruoyanqin ~/Developer/cs3410/project1$ ipython
+Python 2.7.11 |Continuum Analytics, Inc.| (default, Dec  6 2015, 18:57:58) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.1.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: cd /Users/ruoyanqin/Developer/cs4670/pa2
+/Users/ruoyanqin/Developer/cs4670/pa2
+
+In [2]: run tests.py
+Starting test for TODO 1
+Starting test for TODO 2
+> /Users/ruoyanqin/Developer/cs4670/pa2/features.py(154)computeLocalMaxima()
+    153         ipdb.set_trace()
+--> 154         return destImage
+    155 
+
+ipdb> destImage
+array([[False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       ..., 
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False]], dtype=bool)
+ipdb> np.where(destImage==True)
+(array([ 37,  37,  37,  37,  37,  37,  37,  37,  37,  37,  37,  37,  37,
+        37,  38,  38,  38,  38,  38,  38,  38,  39,  39,  39,  39,  40,
+        40,  40,  40,  40,  41,  41,  41,  41,  41,  42,  42,  42,  43,
+        43,  43,  44,  44,  44,  45,  45,  45,  45,  45,  45,  45,  45,
+        45,  45,  45,  45,  45,  45,  45,  45,  45,  45,  45,  45,  46,
+        46,  46,  46,  46,  47,  47,  47,  47,  47,  47,  48,  48,  48,
+        48,  48,  49,  49,  49,  50,  50,  51,  51,  52,  53,  53,  53,
+        53,  54,  54,  55,  55,  56,  56,  56,  56,  56,  59,  60,  60,
+        60,  60,  60,  60,  60,  60,  61,  61,  61,  61,  61,  61,  61,
+        61,  61,  61,  61,  61,  61,  61,  61,  61,  61,  61,  61,  61,
+        61,  61,  61,  61,  61,  62,  62,  62,  62,  62,  62,  62,  62,
+        62,  62,  62,  62,  62,  62,  63,  63,  63,  63,  63,  63,  63,
+        63,  63,  63,  63,  63,  63,  64,  64,  64,  64,  64,  64,  64,
+        64,  64,  64,  64,  64,  64,  64,  64,  64,  64,  64,  65,  65,
+        65,  65,  65,  65,  65,  65,  65,  65,  65,  65,  65,  65,  65,
+        65,  65,  65,  65,  66,  66,  66,  66,  66,  66,  66,  66,  66,
+        66,  66,  66,  66,  66,  66,  66,  66,  66,  66,  67,  67,  67,
+        67,  67,  67,  67,  67,  67,  67,  67,  67,  67,  68,  68,  68,
+        68,  68,  68,  68,  68,  68,  68,  69,  69,  69,  69,  69,  69,
+        69,  70,  70,  70,  71,  71,  71,  71,  72,  72,  72,  72,  72,
+        73,  73,  73,  73,  73,  73,  74,  74,  74,  74,  74,  74,  74,
+        75,  75,  75,  76,  76,  76,  77,  77,  77,  77,  77,  77,  77,
+        77,  77,  77,  77,  78,  78,  78,  78,  78,  78,  78,  78,  78,
+        78,  79,  79,  79,  79,  79,  79,  79,  79,  79,  79,  79,  79,
+        80,  80,  80,  80,  80,  80,  80,  80,  80,  80,  80,  80,  81,
+        81,  81,  81,  81,  81,  81,  81,  81,  81,  82,  82,  82,  82,
+        82,  82,  82,  83,  83,  83,  83,  83,  83,  83,  83,  84,  84,
+        84,  84,  84,  85,  85,  85,  85,  85,  85,  85,  85,  85,  85,
+        86,  86,  86,  86,  87,  87,  87,  87,  87,  88,  88,  88,  88,
+        88,  88,  88,  88,  89,  89,  89,  89,  89,  89,  89,  90,  90,
+        90,  90,  90,  90,  90,  91,  91,  91,  91,  92,  92,  92,  92,
+        92,  92,  93,  93,  93,  93,  93,  93,  93,  93,  93,  93,  93,
+        93,  93,  93,  93,  93,  94,  94,  94,  94,  94,  94,  94,  94,
+        94,  94,  94,  94,  94,  94,  95,  95,  95,  95,  95,  95,  95,
+        95,  95,  95,  95,  95,  95,  96,  96,  96,  96,  96,  96,  96,
+        96,  97,  97,  97,  97,  97,  97,  97,  97,  97,  97,  97,  97,
+        98,  98,  98,  98,  98,  98,  98,  98,  98,  98,  99,  99,  99,
+        99, 100, 100, 100, 100, 101, 101, 101, 101, 101, 101, 101, 101,
+       101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101,
+       101, 101, 101, 101, 101, 102, 102, 102, 102, 102, 102, 102, 102,
+       102, 102, 102, 102, 102, 102, 102, 102, 103, 103, 103, 103, 103,
+       103, 103, 103, 103, 103, 103, 103, 104, 104, 104, 104, 104, 104,
+       104, 104, 104, 105, 105, 105, 105, 105, 105, 105, 105, 105, 105,
+       105, 106, 106, 106, 106, 106, 106, 106, 106, 106, 106, 106, 106,
+       106, 106, 106, 106, 106, 107, 107, 107, 107, 107, 107, 107, 107,
+       107, 107, 107, 107, 107, 107, 107, 108, 108, 108, 108, 108, 108,
+       108, 108, 108, 108, 108, 108, 108, 108, 109, 109, 109, 109, 109,
+       109, 109, 109, 109, 109, 109, 109, 109, 109, 110, 110, 110, 110,
+       110, 110, 110, 110, 110, 110, 110, 110, 110, 110, 110, 111, 111,
+       111, 111, 111, 111, 111, 111, 111, 111, 111, 111, 111, 112, 112,
+       112, 112, 112, 112, 112, 112, 112, 112, 112, 112, 112, 112, 112,
+       112, 112, 112, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113,
+       113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113,
+       113, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114,
+       114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114,
+       114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114,
+       114, 114, 114, 115, 117, 118, 119, 119, 119, 119, 119, 119, 120,
+       120, 120, 120, 120, 120, 120, 121, 121, 121, 121, 121, 121, 121,
+       122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122, 122,
+       122, 122, 122, 122, 122, 122, 122, 122]), array([ 85,  86,  87,  88,  89,  90,  91,  92,  93,  94,  95,  96,  97,
+        98,  85,  86,  87,  88,  89,  90,  98,  85,  86,  87,  98,  85,
+        86,  87,  94,  98,  85,  86,  87,  90,  98,  85,  86,  98,  85,
+        86,  98,  85,  86,  98,  77,  78,  79,  80,  81,  82,  83,  84,
+        85,  86,  97,  98,  99, 100, 101, 102, 103, 104, 105, 106,  77,
+        78,  97, 105, 106,  77,  78,  92,  97, 105, 106,  77,  81,  98,
+       101, 106,  77, 100, 106,  77, 106,  77, 106,  77,  75,  76,  77,
+        83,  93, 103,  71,  89,  72,  73,  74,  75,  88,  69,  69,  70,
+        73,  93,  94,  95, 102, 106,  61,  62,  63,  64,  65,  66,  67,
+        68,  69,  70,  73,  76,  84,  93,  94,  95, 106, 107, 108, 109,
+       110, 111, 112, 113, 114,  61,  62,  63,  64,  65,  66,  67,  68,
+        69,  70,  73,  93,  94, 106,  61,  62,  63,  64,  65,  66,  67,
+        68,  69,  72,  90,  93,  94,  61,  62,  63,  64,  65,  66,  67,
+        68,  81,  88,  89,  90,  93,  94,  97, 109, 110, 111,  61,  62,
+        63,  64,  65,  66,  67,  68,  87,  88,  89,  90,  93,  94, 105,
+       106, 107, 110, 111,  61,  62,  63,  64,  65,  66,  67,  68,  72,
+        86,  87,  88,  89,  90,  93,  94, 105, 106, 108,  61,  62,  63,
+        64,  65,  66,  67,  68,  93,  94, 106, 107, 109,  61,  62,  63,
+        64,  78,  93,  94,  98, 106, 111,  61,  62,  63,  64,  93,  94,
+       114,  61,  93,  94,  61,  68,  93,  94,  61,  75,  93,  94, 101,
+        61,  81,  82,  93,  94, 111,  61,  80,  81,  82,  93,  94,  95,
+        80,  81,  82,  80,  81,  82,  63,  70,  81,  82, 110, 115, 116,
+       117, 118, 119, 120,  81,  82, 104, 114, 115, 116, 117, 118, 119,
+       120,  77,  81,  82, 114, 115, 116, 117, 118, 119, 120, 121, 122,
+        56,  81,  82, 114, 115, 116, 117, 118, 119, 120, 121, 122,  60,
+        81,  82, 105, 117, 118, 119, 120, 121, 122,  66,  81,  82, 119,
+       120, 121, 122,  53, 113, 114, 115, 119, 120, 121, 122,  53,  57,
+       101, 121, 122,  45,  46,  47,  48,  49,  50,  51, 101, 121, 122,
+        45,  74, 101, 105,  45,  74, 101, 108, 115,  45,  48,  49,  54,
+        73,  74, 101, 118,  45,  48,  49,  73,  74, 101, 102,  45,  71,
+        72,  73,  74, 101, 102,  45,  60, 101, 102,  45,  46,  47, 101,
+       102, 109,  45,  46,  47,  50,  68,  69,  70,  71,  72,  73,  74,
+        75,  82, 101, 102, 105,  45,  46,  47,  68,  69,  70,  71,  72,
+        73,  74,  75,  82, 101, 102,  45,  46,  47,  68,  69,  70,  71,
+        72,  73,  78,  82, 101, 102,  45,  46,  47,  69,  71,  72, 101,
+       102,  45,  46,  69,  70,  71,  72, 101, 102, 103, 120, 121, 122,
+        45,  51,  69,  79, 101, 102, 103, 113, 121, 122,  45,  69, 121,
+       122,  45, 109, 121, 122,  45,  73,  84,  85,  86,  87,  88,  89,
+        90,  91,  92,  93,  94,  95,  96,  97,  98,  99, 100, 101, 108,
+       126, 127, 128, 129, 130,  45,  84,  85,  86,  87,  88,  89,  90,
+       101, 108, 115, 126, 127, 128, 129, 130,  45,  55,  87,  88,  89,
+        90,  91, 101, 127, 128, 129, 130,  45,  59,  93,  94, 122, 127,
+       128, 129, 130,  45,  59,  60,  61,  62,  63,  64, 127, 128, 129,
+       130,  45,  52,  59,  60,  61,  62,  63,  64,  65,  66,  67,  68,
+        99, 127, 128, 129, 130,  61,  62,  63,  64,  65,  66,  67,  68,
+        69,  70,  75, 127, 128, 129, 130,  61,  62,  63,  64,  65,  66,
+        67,  69,  70, 107, 127, 128, 129, 130,  61,  62,  63,  64,  65,
+        66,  67,  68,  69,  70,  85, 127, 129, 130,  61,  62,  63,  64,
+        65,  66,  67,  68,  69,  70, 115, 125, 126, 129, 130,  61,  62,
+        63,  64,  65,  66,  67,  68,  69,  91, 126, 129, 130,  61,  62,
+        63,  64,  65,  66,  67,  68,  69,  70,  71,  91,  92,  93,  94,
+        95, 129, 130,  61,  62,  63,  64,  65,  66,  67,  68,  69,  70,
+        71,  72,  91,  92,  93,  94,  95,  96,  97,  98,  99, 100, 103,
+       122,  61,  62,  63,  64,  65,  66,  67,  68,  69,  70,  71,  72,
+        73,  74,  75,  76,  77,  78,  79,  80,  81,  82,  83,  84,  85,
+        86,  87,  88,  89,  90,  91,  92,  93,  94,  95,  96,  97,  98,
+        99, 100, 107, 113, 101, 101, 101, 102, 103, 104, 107, 108, 101,
+       102, 103, 104, 105, 106, 107, 101, 102, 103, 104, 105, 106, 107,
+       101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113,
+       114, 115, 116, 117, 118, 119, 120, 130]))
+ipdb> destImage[37,85]
+True
+ipdb> q
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 54, in try_this
+    try:
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 154, in computeLocalMaxima
+    
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 154, in computeLocalMaxima
+    
+  File "/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+TODO 2 threw an exception, see exception above
+Starting test for TODO 3
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 54, in try_this
+    try:
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 199, in detectKeypoints
+    # TODO-BLOCK-END
+Exception: TODO in features.py not implemented
+TODO 3 threw an exception, see exception above
+Starting test for TODO 4
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 54, in try_this
+    try:
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 262, in describeFeatures
+    # TODO-BLOCK-END
+Exception: TODO in features.py not implemented
+TODO 4 threw an exception, see exception above
+Starting test for TODO 5 and/or 6
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 54, in try_this
+    try:
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 298, in describeFeatures
+    # TODO-BLOCK-END
+Exception: TODO in features.py not implemented
+TODO 5 and/or 6 threw an exception, see exception above
+
+In [3]: reload(fea
+features       features.py    features.pyc   featuresUI.py  
+
+In [3]: reload(features)
+Out[3]: <module 'features' from 'features.py'>
+
+In [4]: run tests.py
+Starting test for TODO 1
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+     30 
+
+ipdb> c
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+     30 
+
+ipdb> c
+Starting test for TODO 2
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+     30 
+
+ipdb> arr1
+array([[False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       ..., 
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False]], dtype=bool)
+ipdb> arr2
+array([[ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       ..., 
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True]], dtype=bool)
+ipdb> np.where(arr2==False)
+(array([ 36,  36,  36, ..., 125, 125, 125]), array([ 84,  85,  86, ..., 115, 116, 117]))
+ipdb> a2 = len(np.where(arr2==True)[0])
+ipdb> a2
+35330
+ipdb> a1 = len(np.where(arr1==True)[0])
+ipdb> a1
+775
+ipdb> len(arr2)
+200
+ipdb> len(arr1)
+200
+ipdb> quit
+---------------------------------------------------------------------------
+BdbQuit                                   Traceback (most recent call last)
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in <module>()
+    116 HKD=HKD2()
+    117 
+--> 118 try_this(2, HKD.computeLocalMaxima, loaded['c'], compare_array, loaded['a'])
+    119 
+    120 # patch HKD so future tests won't fail because the last test failed
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in try_this(todo, run, truth, compare, *args, **kargs)
+     64                 failed+=1
+     65     else:
+---> 66         if not compare(output, truth, **kargs):
+     67             print("TODO {} doesn't pass test".format(todo))
+     68             failed+=1
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in compare_array(arr1, arr2)
+     27 def compare_array(arr1, arr2):
+     28     # ipdb.set_trace()
+---> 29     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+     30 
+     31 def compare_cv2_points(pnt1, pnt2):
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in compare_array(arr1, arr2)
+     27 def compare_array(arr1, arr2):
+     28     # ipdb.set_trace()
+---> 29     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+     30 
+     31 def compare_cv2_points(pnt1, pnt2):
+
+/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.pyc in trace_dispatch(self, frame, event, arg)
+     47             return # None
+     48         if event == 'line':
+---> 49             return self.dispatch_line(frame)
+     50         if event == 'call':
+     51             return self.dispatch_call(frame, arg)
+
+/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.pyc in dispatch_line(self, frame)
+     66         if self.stop_here(frame) or self.break_here(frame):
+     67             self.user_line(frame)
+---> 68             if self.quitting: raise BdbQuit
+     69         return self.trace_dispatch
+     70 
+
+BdbQuit: 
+
+In [5]: quit
+(py2)ruoyanqin ~/Developer/cs3410/project1$ cd ~/Developer/
+(py2)ruoyanqin ~/Developer$ cd cs4670/pa2
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ ls
+total 224
+drwxrwxr-x@ 16 ruoyanqin  staff   544B Mar  7 17:52 .
+drwxr-xr-x   6 ruoyanqin  staff   204B Mar  6 18:54 ..
+-rw-r--r--@  1 ruoyanqin  staff   6.0K Mar  1 09:58 .DS_Store
+drwxr-xr-x  13 ruoyanqin  staff   442B Mar  6 22:24 .git
+-rw-rw-r--@  1 ruoyanqin  staff    40B Feb 24 17:46 .gitignore
+-rw-rw-r--@  1 ruoyanqin  staff   7.8K Feb 21 20:21 benchmark.py
+-rw-r--r--   1 ruoyanqin  staff   7.9K Mar  6 22:20 benchmark.pyc
+-rw-rw-r--@  1 ruoyanqin  staff    18K Mar  7 17:57 features.py
+-rw-r--r--   1 ruoyanqin  staff    16K Mar  7 17:52 features.pyc
+-rw-rw-r--@  1 ruoyanqin  staff    24K Feb 21 20:21 featuresUI.py
+-rw-r--r--   1 ruoyanqin  staff   2.3K Mar  1 09:40 harris.py
+drwxrwxr-x@ 11 ruoyanqin  staff   374B Mar  6 08:41 resources
+-rw-r--r--   1 ruoyanqin  staff    66B Mar  6 22:10 test7and8.py
+-rw-rw-r--@  1 ruoyanqin  staff   4.6K Mar  7 17:52 tests.py
+-rw-rw-r--@  1 ruoyanqin  staff   2.0K Feb 21 20:21 transformations.py
+-rw-r--r--   1 ruoyanqin  staff   2.2K Mar  1 09:49 transformations.pyc
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git add .
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git commit -m "harris compute working."
+[master 2eaacdb] harris compute working.
+ 2 files changed, 19 insertions(+), 20 deletions(-)
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git push origin master
+To git@github.com:alicey21/CS4670_PA2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'git@github.com:alicey21/CS4670_PA2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git push origin master --force
+Counting objects: 66, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (65/65), done.
+Writing objects: 100% (66/66), 18.72 MiB | 11.24 MiB/s, done.
+Total 66 (delta 4), reused 0 (delta 0)
+To git@github.com:alicey21/CS4670_PA2.git
+ + 00e884f...2eaacdb master -> master (forced update)
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ cd ../../qsensorserver/
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku pg:reset postgres
+ !    No app specified.
+ !    Run this command from an app folder or specify which app to use with --app APP.
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku run bash
+ ▸    Error: No app specified
+ ▸    Usage: heroku run --app APP
+ ▸    We don't know which app to run this on.
+ ▸    Run this command from inside an app folder or specify which app to use with --app APP
+ ▸    
+ ▸    https://devcenter.heroku.com/articles/using-the-cli#app-commands
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku logs --app qsensorserver
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku pg:reset postgres
+WARNING: Toolbelt is currently updating
+ !    No app specified.
+ !    Run this command from an app folder or specify which app to use with --app APP.
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku pg:reset postgres --app qsensorserver
+ !    Unknown database: postgres. Valid options are: DATABASE_URL
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku pg:reset DATABASE_URL  --app qsensorserver
+
+ !    WARNING: Destructive Action
+ !    This command will affect the app: qsensorserver
+ !    To proceed, type "qsensorserver" or re-run this command with --confirm qsensorserver
+
+> qsensorserver
+Resetting DATABASE_URL... done
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku run python manage.py migrate
+ ▸    Error: No app specified
+ ▸    Usage: heroku run --app APP
+ ▸    We don't know which app to run this on.
+ ▸    Run this command from inside an app folder or specify which app to use with --app APP
+ ▸    
+ ▸    https://devcenter.heroku.com/articles/using-the-cli#app-commands
+(py2)ruoyanqin ~/Developer/qsensorserver$ heroku run python manage.py migrate --app qsensorserver
+Running python manage.py migrate on qsensorserver... up, run.3233
+Operations to perform:
+  Apply all migrations: admin, auth, data_, sessions, contenttypes
+Running migrations:
+  Rendering model states... DONE
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying data_.0001_initial... OK
+  Applying data_.0002_auto_20160218_0623... OK
+  Applying data_.0003_auto_20160218_0638... OK
+  Applying data_.0004_auto_20160218_0639... OK
+  Applying data_.0005_auto_20160224_0422... OK
+  Applying sessions.0001_initial... OK
+(py2)ruoyanqin ~/Developer/qsensorserver$ CD -
+/usr/bin/CD: line 4: cd: OLDPWD not set
+(py2)ruoyanqin ~/Developer/qsensorserver$ cd -
+/Users/ruoyanqin/Developer/cs4670/pa2
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 4 (delta 3), reused 4 (delta 3), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From github.com:alicey21/CS4670_PA2
+ * branch            master     -> FETCH_HEAD
+   2eaacdb..b18ec63  master     -> origin/master
+Updating 2eaacdb..b18ec63
+Fast-forward
+ features.py | 19 +++++++++++++++----
+ tests.py    |  7 ++++++-
+ 2 files changed, 21 insertions(+), 5 deletions(-)
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ ipython 
+Python 2.7.11 |Continuum Analytics, Inc.| (default, Dec  6 2015, 18:57:58) 
+Type "copyright", "credits" or "license" for more information.
+
+IPython 4.1.1 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+In [1]: run tests.py
+Starting test for TODO 1
+Starting test for TODO 2
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 163, in computeLocalMaxima
+    if np.allclose(harrisImage[i,j], np.max(neighborhood)): #change datatype np.close()
+  File "/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/site-packages/numpy/core/fromnumeric.py", line 2263, in amax
+    out=out, keepdims=keepdims)
+  File "/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/site-packages/numpy/core/_methods.py", line 26, in _amax
+    return umr_maximum(a, axis, None, out, keepdims)
+ValueError: zero-size array to reduction operation maximum which has no identity
+TODO 2 threw an exception, see exception above
+Starting test for TODO 3
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 214, in detectKeypoints
+    f.angle = orientationImage(x,y)
+TypeError: 'numpy.ndarray' object is not callable
+TODO 3 threw an exception, see exception above
+Starting test for TODO 4
+iStarting test for TODO 5 and/or 6
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/features.py", line 325, in describeFeatures
+    raise Exception("TODO in features.py not implemented")
+Exception: TODO in features.py not implemented
+TODO 5 and/or 6 threw an exception, see exception above
+
+In [2]: reload(features)
+Out[2]: <module 'features' from 'features.py'>
+
+In [3]: run tests.py
+Starting test for TODO 1
+Starting test for TODO 2
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 158, in computeLocalMaxima
+    ipdb.set_trace()
+NameError: global name 'ipdb' is not defined
+TODO 2 threw an exception, see exception above
+Starting test for TODO 3
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 215, in detectKeypoints
+    f.angle = orientationImage(x,y)
+TypeError: 'numpy.ndarray' object is not callable
+TODO 3 threw an exception, see exception above
+Starting test for TODO 4
+Starting test for TODO 5 and/or 6
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 326, in describeFeatures
+    raise Exception("TODO in features.py not implemented")
+Exception: TODO in features.py not implemented
+TODO 5 and/or 6 threw an exception, see exception above
+
+In [4]: reload(features)
+Out[4]: <module 'features' from 'features.py'>
+
+In [5]: run tests.py
+Starting test for TODO 1
+Starting test for TODO 2
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 158, in computeLocalMaxima
+    ipdb.set_trace()
+NameError: global name 'ipdb' is not defined
+TODO 2 threw an exception, see exception above
+Starting test for TODO 3
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 215, in detectKeypoints
+    f.angle = orientationImage(x,y)
+TypeError: 'numpy.ndarray' object is not callable
+TODO 3 threw an exception, see exception above
+Starting test for TODO 4
+Starting test for TODO 5 and/or 6
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 326, in describeFeatures
+    raise Exception("TODO in features.py not implemented")
+Exception: TODO in features.py not implemented
+TODO 5 and/or 6 threw an exception, see exception above
+
+In [6]: reload(features)
+Out[6]: <module 'features' from 'features.py'>
+
+In [7]: run tests.py
+Starting test for TODO 1
+Starting test for TODO 2
+> /Users/ruoyanqin/Developer/cs4670/pa2/features.py(161)computeLocalMaxima()
+    160 
+--> 161         harrisImage = np.lib.pad(harrisImage, (windowSize, windowSize), 'constant', constant_values=(0,0))
+    162         for i in range(height):
+
+ipdb> q
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 161, in computeLocalMaxima
+    if i < 3 or i > height-4:
+  File "features.py", line 161, in computeLocalMaxima
+    if i < 3 or i > height-4:
+  File "/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.py", line 49, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.py", line 68, in dispatch_line
+    if self.quitting: raise BdbQuit
+BdbQuit
+TODO 2 threw an exception, see exception above
+Starting test for TODO 3
+Traceback (most recent call last):
+  File "/Users/ruoyanqin/Developer/cs4670/pa2/tests.py", line 60, in try_this
+    output = run(*args)
+  File "features.py", line 216, in detectKeypoints
+    f.size=10
+TypeError: 'numpy.ndarray' object is not callable
+TODO 3 threw an exception, see exception above
+Starting test for TODO 4
+q
+
+
+^C---------------------------------------------------------------------------
+KeyboardInterrupt                         Traceback (most recent call last)
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in <module>()
+    121 HKD=HKD2()
+    122 
+--> 123 try_this(2, HKD.computeLocalMaxima, loaded['c'], compare_array, loaded['a'])
+    124 
+    125 # patch HKD so future tests won't fail because the last test failed
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in try_this(todo, run, truth, compare, *args, **kargs)
+     58     failed = 0
+     59     try:
+---> 60         output = run(*args)
+     61     except Exception as e:
+     62         traceback.print_exc()
+
+/Users/ruoyanqin/Developer/cs4670/pa2/features.py in describeFeatures(self, image, keypoints)
+    287                     if ((x+c <0) or (x+c>=img_width) or (y+r<0) or (y+r>=img_height)):
+    288                         desc[i, (2+r)*5 + (c+2)] = 0
+--> 289                         #print(desc[i, (2+r)*5 + (c+2)])
+    290                     else:
+    291                         desc[i, (2+r)*5 + (c+2)] = grayImage[ y+r,x+c]
+
+KeyboardInterrupt: 
+
+In [8]: reload(features)
+Out[8]: <module 'features' from 'features.pyc'>
+
+In [9]: reload(features)
+Out[9]: <module 'features' from 'features.pyc'>
+
+In [10]: run tests.py
+Starting test for TODO 1
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     a1 = arr1.ravel()
+     30     a2 = arr2.ravel()
+
+ipdb> q
+---------------------------------------------------------------------------
+BdbQuit                                   Traceback (most recent call last)
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in <module>()
+    113 d = unpickle_cv2(loaded['d_proc'])
+    114 
+--> 115 try_this(1, HKD.computeHarrisValues, [loaded['a'],loaded['b']], compare_array, grayImage)
+    116 
+    117 # patch HKD so future tests won't fail because the last test failed
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in try_this(todo, run, truth, compare, *args, **kargs)
+     65     if type(output) is list or type(output) is tuple:
+     66         for i in range(len(output)):
+---> 67             if not compare(output[i], truth[i], **kargs):
+     68                 print("TODO {} doesn't pass test: {}".format(todo, i))
+     69                 failed+=1
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in compare_array(arr1, arr2)
+     27 def compare_array(arr1, arr2):
+     28     ipdb.set_trace()
+---> 29     a1 = arr1.ravel()
+     30     a2 = arr2.ravel()
+     31     #for i in range (len(a1)):
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in compare_array(arr1, arr2)
+     27 def compare_array(arr1, arr2):
+     28     ipdb.set_trace()
+---> 29     a1 = arr1.ravel()
+     30     a2 = arr2.ravel()
+     31     #for i in range (len(a1)):
+
+/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.pyc in trace_dispatch(self, frame, event, arg)
+     47             return # None
+     48         if event == 'line':
+---> 49             return self.dispatch_line(frame)
+     50         if event == 'call':
+     51             return self.dispatch_call(frame, arg)
+
+/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.pyc in dispatch_line(self, frame)
+     66         if self.stop_here(frame) or self.break_here(frame):
+     67             self.user_line(frame)
+---> 68             if self.quitting: raise BdbQuit
+     69         return self.trace_dispatch
+     70 
+
+BdbQuit: 
+
+In [11]: run tests.py
+Starting test for TODO 1
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     a1 = arr1.ravel()
+     30     a2 = arr2.ravel()
+
+ipdb> c
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     a1 = arr1.ravel()
+     30     a2 = arr2.ravel()
+
+ipdb> c
+Starting test for TODO 2
+[[ True  True  True ...,  True  True  True]
+ [ True  True  True ...,  True  True  True]
+ [ True  True  True ...,  True  True  True]
+ ..., 
+ [ True  True  True ...,  True  True  True]
+ [ True  True  True ...,  True  True  True]
+ [ True  True  True ...,  True  True  True]]
+(array([  0,   0,   0, ..., 199, 199, 199]), array([  0,   1,   2, ..., 197, 198, 199]))
+36780
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(29)compare_array()
+     28     ipdb.set_trace()
+---> 29     a1 = arr1.ravel()
+     30     a2 = arr2.ravel()
+
+ipdb> n
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(30)compare_array()
+     29     a1 = arr1.ravel()
+---> 30     a2 = arr2.ravel()
+     31     #for i in range (len(a1)):
+
+ipdb> n
+> /Users/ruoyanqin/Developer/cs4670/pa2/tests.py(34)compare_array()
+     33       #      print(a1[i],a2[i])
+---> 34     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+     35 
+
+ipdb> a1
+array([ True,  True,  True, ...,  True,  True,  True], dtype=bool)
+ipdb> a2
+array([ True,  True,  True, ...,  True,  True,  True], dtype=bool)
+ipdb> len(a1)
+40000
+ipdb> len(a2)
+40000
+ipdb> a1 == a2
+array([ True,  True,  True, ...,  True,  True,  True], dtype=bool)
+ipdb> arr1 == arr2
+array([[ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       ..., 
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True]], dtype=bool)
+ipdb> sum((arr1 == arr2)*1)
+array([200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 193, 193, 176, 176, 191, 192, 196, 195, 192, 193,
+       190, 197, 197, 194, 194, 193, 191, 188, 174, 174, 179, 178, 181,
+       182, 182, 179, 168, 174, 180, 184, 184, 183, 186, 185, 185, 180,
+       189, 191, 183, 176, 171, 171, 161, 160, 177, 182, 184, 183, 177,
+       180, 175, 172, 172, 186, 189, 186, 155, 159, 159, 170, 183, 190,
+       192, 190, 182, 189, 190, 192, 195, 192, 194, 193, 189, 173, 182,
+       181, 193, 191, 190, 186, 187, 183, 196, 195, 195, 190, 191, 187,
+       186, 186, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+       200, 200, 200, 200, 200])
+ipdb> np.sum((arr1 == arr2)*1)
+38550
+ipdb> q
+---------------------------------------------------------------------------
+BdbQuit                                   Traceback (most recent call last)
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in <module>()
+    121 
+    122 try_this(2, HKD.computeLocalMaxima, loaded['c'], compare_array, loaded['a'])
+--> 123 
+    124 # patch HKD so future tests won't fail because the last test failed
+    125 class HKD3(HKD2):
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in try_this(todo, run, truth, compare, *args, **kargs)
+     69     else:
+     70         if not compare(output, truth, **kargs):
+---> 71             print("TODO {} doesn't pass test".format(todo))
+     72             failed+=1
+     73     return failed
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in compare_array(arr1, arr2)
+     32       #      print(a1[i],a2[i])
+     33     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+---> 34 
+     35 def compare_cv2_points(pnt1, pnt2):
+     36     if not np.isclose(pnt1.pt[0],pnt2.pt[0],rtol=1e-3,atol=1e-5): return False
+
+/Users/ruoyanqin/Developer/cs4670/pa2/tests.py in compare_array(arr1, arr2)
+     32       #      print(a1[i],a2[i])
+     33     return np.allclose(arr1,arr2,rtol=1e-3,atol=1e-5)
+---> 34 
+     35 def compare_cv2_points(pnt1, pnt2):
+     36     if not np.isclose(pnt1.pt[0],pnt2.pt[0],rtol=1e-3,atol=1e-5): return False
+
+/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.pyc in trace_dispatch(self, frame, event, arg)
+     47             return # None
+     48         if event == 'line':
+---> 49             return self.dispatch_line(frame)
+     50         if event == 'call':
+     51             return self.dispatch_call(frame, arg)
+
+/Users/ruoyanqin/anaconda/envs/py2/lib/python2.7/bdb.pyc in dispatch_line(self, frame)
+     66         if self.stop_here(frame) or self.break_here(frame):
+     67             self.user_line(frame)
+---> 68             if self.quitting: raise BdbQuit
+     69         return self.trace_dispatch
+     70 
+
+BdbQuit: 
+
+In [12]: q
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-12-c3be117041a1> in <module>()
+----> 1 q
+
+NameError: name 'q' is not defined
+
+In [13]: quit
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git add .
+(py2)ruoyanqin ~/Developer/cs4670/pa2$ git commit -m "Trying to fix todo 2"
