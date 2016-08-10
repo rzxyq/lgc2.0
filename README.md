@@ -1,4 +1,4 @@
-Instructions:
+#installation Instructions:
 
 Use virtualenv if you have one. If not, you can also install this directly.
 
@@ -20,3 +20,13 @@ If you want to use the admin interface, "python manage.py createsuperuser"
 
 5. To test on local server, run "python manage.py runserver". Open browser and go to "localhost:8000" and you'll see the website.
 
+
+#Deployment
+make sure you have heroku CLI installed
+"heroku git:remote -a falling-wind-1624
+heroku run bash"
+For more see https://devcenter.heroku.com/articles/git
+
+#backup
+"heroku pg:backups capture --app appname
+heroku pg:backups public-url b001 --app appname"
