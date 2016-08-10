@@ -30,3 +30,7 @@ For more see https://devcenter.heroku.com/articles/git
 #backup
 "heroku pg:backups capture --app appname
 heroku pg:backups public-url b001 --app appname"
+to view dumped file
+"pg_restore -l your_db_dump.file"
+remove db completely on heroku
+"heroku pg:reset DATABASE"
