@@ -132,7 +132,12 @@ STATICFILES_DIRS = (
 
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
+# try:
+#     from .local_settings import *
+# except ImportError:
+#     pass
+
 try:
+    os.environ['DATABASE_URL']
+except:
     from .local_settings import *
-except ImportError:
-    pass
