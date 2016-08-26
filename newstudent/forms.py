@@ -350,6 +350,7 @@ class NewStudentForm(forms.Form):
         ('Prepare', 'Prepare: pre-orientation program for incoming international students; an opportunity to make new friends from all over the world.'),
         ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment'),
         ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
+        ('SDS','Student Disability Services facilitates services and accommodations so that Cornell students with disabilities enjoy the same opportunities as their peers with the greatest degree of independence possible.'),
         ('Tatkon Center','Tatkon Center: Connecting the academic heart of Cornell with the residential center of student life on north campus')
 )   
 
