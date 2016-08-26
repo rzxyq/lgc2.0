@@ -347,6 +347,7 @@ class NewStudentForm(forms.Form):
         ('KAPi','Kappa Alpha Pi: A selective pre law fraternity committed to preparing students for law school applications and a legal career'),
         ('OSC','Orientation Steering Committee (OSC): The student group responsible for organizing new student orientation'),
         ('Phi Delta Epsilon','Phi Delta Epsilon International Medical Fraternity: A top premed fraternity at Cornell'),
+        ('Prepare', 'Prepare: pre-orientation program for incoming international students; an opportunity to make new friends from all over the world.'),
         ('Slope Media','Slope Media: As the Cornell multimedia powerhouse, Slope is a leader in Cornell-related media and entertainment'),
         ('Speech and Debate','Cornell Speech & Debate Society: Organizing intercollegiate speech and debate competition at Cornell'),
         ('Tatkon Center','Tatkon Center: Connecting the academic heart of Cornell with the residential center of student life on north campus')

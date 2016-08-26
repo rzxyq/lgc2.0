@@ -34,3 +34,7 @@ to view dumped file
 "pg_restore -l your_db_dump.file"
 remove db completely on heroku
 "heroku pg:reset DATABASE"
+
+#problems
+psycopg2
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
