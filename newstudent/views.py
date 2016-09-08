@@ -65,7 +65,10 @@ def basic(request):
             message = '''Thanks for completing the New Students survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/timeline/.  Please be on the lookout for an email once an upperclassman has selected you. If you don't get one by Sept. 15, please let us know.'''
             email = 'Let\'s Get Coffee<letsgetcoffeecornell@gmail.com>'
             recipients = [student.netid + '@cornell.edu']
-            send_mail(mail_title, message, email, recipients)
+            try:
+                send_mail(mail_title, message, email, recipients)
+            except:
+                pass
             return HttpResponseRedirect('/thanks_newstudent/')
     else:
         form = NewStudentForm()
