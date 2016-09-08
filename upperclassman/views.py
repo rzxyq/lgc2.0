@@ -44,7 +44,10 @@ def upper(request):
             # Yixuan Zhang (yz427)'''
             email = 'Let\'s Get Coffee<letsgetcoffeecornell@gmail.com>'
             recipients = [upperclass.netid + '@cornell.edu']
-            send_mail(mail_title, message, email, recipients)
+            try:
+                send_mail(mail_title, message, email, recipients)
+            except:
+                pass
             return HttpResponseRedirect('/thanks_upperclassman/')
     else:
         form = UpperClassmanForm()
