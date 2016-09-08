@@ -112,7 +112,7 @@ EMAIL_PORT = 587
 
 DEFAULT_FROM_EMAIL = 'letsgetcoffeecornell@gmail.com'
 EMAIL_HOST_USER = 'letsgetcoffeecornell@gmail.com'
-EMAIL_HOST_PASSWORD = 'Blakebarr'
+EMAIL_HOST_PASSWORD = 'lgccornell'
 SERVER_EMAIL = 'django@letsgetcoffeecornell@gmail.com'
 
 
