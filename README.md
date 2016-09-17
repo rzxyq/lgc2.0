@@ -32,8 +32,13 @@ For more see https://devcenter.heroku.com/articles/git
 heroku pg:backups public-url b001 --app appname"
 to view dumped file
 "pg_restore -l your_db_dump.file"
+restore
+"pg_restore -d lgcfall2016 latest.dump"
 remove db completely on heroku
 "heroku pg:reset DATABASE"
+"\connect" \dt
+COPY newstudent_newstudent TO '/Users/ruoyanqin/Developer/lgc/newstudents.csv' DELIMITER ',' CSV HEADER;
+COPY upperclassman_upperclassman TO '/Users/ruoyanqin/Developer/lgc/upperclassman.csv' DELIMITER ',' CSV HEADER;
 
 #problems
 psycopg2
