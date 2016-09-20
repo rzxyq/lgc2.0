@@ -18,17 +18,25 @@ def login(request):
             net = (form.cleaned_data['netid']).strip()
             try:
                 data = Upperclassman.objects.get(netid__iexact=net)
+                print("wow")
             except ObjectDoesNotExist:
                 return HttpResponseRedirect('/error_login/')
             if data.finished:
                  return HttpResponseRedirect('/error_selected/')
             elif name.lower() == data.name.lower():
-                selectees = NewStudent.objects.filter(Q(major=data.major1) |
-                    Q(major=data.major2) | Q(major=data.major3)).filter(selected=False)
-                if selectees.count() < 5:
-                    selectees = NewStudent.objects.filter(college=data.college).filter(selected=False)
-                if selectees.count() < 5:
-                    selectees = NewStudent.objects.filter(selected=False)
+                try:
+                    print("wow2")
+                    selectees = NewStudent.objects.filter(Q(major=data.major1) |
+                        Q(major=data.major2) | Q(major=data.major3)).filter(selected=False)
+                    if selectees.count() < 5:
+                        selectees = NewStudent.objects.filter(college=data.college).filter(selected=False)
+                    if selectees.count() < 5:
+                        selectees = NewStudent.objects.filter(selected=False)
+                    print("wow3")
+                except:
+                    print("exception happend!")
+
+
 
                 return render(request, 'selection/select.html', {
                     'request': request,
