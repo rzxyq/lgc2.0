@@ -40,5 +40,5 @@ urlpatterns = [
     url(r'^selection/', include('selection.urls')),
 
     # Export Data
-    url(r'^export_action/', include("export_action.urls", namespace="export_action")),
+    # url(r'^export_action/', include("export_action.urls", namespace="export_action")),
 ]
