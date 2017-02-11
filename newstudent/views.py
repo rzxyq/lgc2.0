@@ -62,7 +62,7 @@ def basic(request):
                     )
             student.save()
             mail_title = 'Let\'s Get Coffee: Thanks!'
-            message = '''Thanks for completing the New Students survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/timeline/.  Please be on the lookout for an email once an upperclassman has selected you. If you don't get one by Sept. 15, please let us know.'''
+            message = '''Thanks for completing the New Students survey! You may wish to familiarize yourself with the schedule here: http://www.letsgetcoffeecornell.com/timeline/.  Please be on the lookout for an email once an upperclassman has selected you. If you don't get one by Feb. 15, please let us know.'''
             email = 'Let\'s Get Coffee<letsgetcoffeecornell@gmail.com>'
             recipients = [student.netid + '@cornell.edu']
             try:
