@@ -44,7 +44,7 @@
     "major1": "Electrical and Computer Engineering",
     "major2": "None",
     "major3": "None",
-    "finished": false,
+    "finished": true,
     "survey": "['Clubfest']",
     "participated": "Yes",
     "organization": ""
@@ -214,7 +214,7 @@
     "major1": "Applied Economics and Management",
     "major2": "Policy Analysis and Management",
     "major3": "None",
-    "finished": false,
+    "finished": true,
     "survey": "['Word of mouth']",
     "participated": "Yes",
     "organization": ""
@@ -1030,7 +1030,7 @@
     "major1": "Chemical Engineering",
     "major2": "None",
     "major3": "None",
-    "finished": false,
+    "finished": true,
     "survey": "['Clubfest', 'Social Media']",
     "participated": "Yes",
     "organization": ""
@@ -1149,7 +1149,7 @@
     "major1": "English",
     "major2": "None",
     "major3": "None",
-    "finished": false,
+    "finished": true,
     "survey": "[]",
     "participated": "Yes",
     "organization": ""
@@ -1185,6 +1185,23 @@
     "major3": "None",
     "finished": false,
     "survey": "['Advertising']",
+    "participated": "No",
+    "organization": ""
+  }
+},
+{
+  "model": "upperclassman.upperclassman",
+  "pk": 80,
+  "fields": {
+    "name": "Jose Fernandez Guerrero",
+    "netid": "jaf377",
+    "year": "Junior",
+    "college": "Arts & Sciences",
+    "major1": "Linguistics",
+    "major2": "Anthropology",
+    "major3": "College Scholar",
+    "finished": false,
+    "survey": "['Advertising', 'Social Media']",
     "participated": "No",
     "organization": ""
   }
