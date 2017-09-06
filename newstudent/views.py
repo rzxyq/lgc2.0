@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from .forms import *
 from .models import *
 from django.core.mail import send_mail
+import sendgrid
 
 def arrayToText(array):
     str = ""

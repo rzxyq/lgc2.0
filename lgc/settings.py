@@ -106,13 +106,15 @@ USE_TZ = True
 # Email settings
 # EMAIL_HOST should be set to whatever host name your mail server is on.
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'app20377698@heroku.com'
+EMAIL_HOST_PASSWORD = 'abnkxxmy6737'
 EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 DEFAULT_FROM_EMAIL = 'letsgetcoffeecornell@gmail.com'
-EMAIL_HOST_USER = 'letsgetcoffeecornell@gmail.com'
-EMAIL_HOST_PASSWORD = 'lgccornell'
+
 SERVER_EMAIL = 'django@letsgetcoffeecornell@gmail.com'
 
 
